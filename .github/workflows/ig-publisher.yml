@@ -28,10 +28,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      # Download dependencies via FHIR Package Tool using sushi-config.yaml from Resources
-      - name: Download Dependencies
-        run: |
-          fhir-pkg-tool --sushi-deps-file ${{ env.SUSHI_INPUT_DIR }}/sushi-config.yaml
+# alle dependencies enthalten bereits snapshots
+#      # Download dependencies via FHIR Package Tool using sushi-config.yaml from Resources
+#      - name: Download Dependencies
+#        run: |
+#          fhir-pkg-tool --sushi-deps-file ${{ env.SUSHI_INPUT_DIR }}/sushi-config.yaml
 
       # Run SUSHI (FSH -> FHIR conversion) on Resources directory
       - name: Run SUSHI

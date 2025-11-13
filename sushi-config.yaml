@@ -25,3 +25,8 @@ dependencies:
 menu:
   Home: index.html
   Artifacts: artifacts.html
+
+parameters:
+  no-narrative:
+  - '*/*'  # does not seems to work
+  - 'CapabilityStatement/*' # this works for me
