@@ -1,58 +1,35 @@
-FROM mcr.microsoft.com/devcontainers/base:alpine-3.18
+FROM eclipse-temurin:21-jdk-jammy
 
-# Setzen der Umgebungsvariablen
-ENV FIRELY_TERMINAL_VERSION=3.1.0
-ENV JAVA_VALIDATOR_VERSION=6.0.11
-ENV SUSHI_VERSION=3.8.0
-# Installieren der notwendige Tools
-# Add Microsoft's .NET SDK repository and install .NET SDK
-RUN wget https://dot.net/v1/dotnet-install.sh \
-    && chmod +x dotnet-install.sh \
-    && ./dotnet-install.sh --channel 6.0 --install-dir /usr/share/dotnet \
-    && ln -s /usr/share/dotnet/dotnet /usr/local/bin \
-    && rm dotnet-install.sh
+# Install base tools, fonts, and Ruby for Jekyll
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      curl ca-certificates unzip git \
+      fonts-dejavu fonts-liberation fontconfig \
+      ruby ruby-dev build-essential \
+      bash-completion \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install ICU libraries
-RUN apk add --no-cache icu-libs
+# Install Jekyll and Bundler
+RUN gem install jekyll bundler
 
-# Install Node.js and npm
-RUN apk add --no-cache nodejs npm
+# Install Node 20 via NodeSource (fix for SUSHI)
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+ && apt-get update && apt-get install -y nodejs \
+ && npm i -g fsh-sushi
 
-# Install Java (OpenJDK)
-RUN apk add --no-cache openjdk11
+# Install fhir-pkg-tool latest release
+RUN curl -fsSL https://github.com/Gefyra/fhir-pkg-tool/releases/latest/download/fhir-pkg-tool.jar \
+      -o /opt/fhir-pkg-tool.jar \
+ && chmod 644 /opt/fhir-pkg-tool.jar \
+ && printf '#!/usr/bin/env bash\nexec java -jar /opt/fhir-pkg-tool.jar "$@"\n' > /usr/local/bin/fhir-pkg-tool \
+ && chmod +x /usr/local/bin/fhir-pkg-tool
 
-# Install Firely Terminal as vscode user
-# Switch to the vscode user
-USER vscode
+# Set workdir to match VSCode default mount
+WORKDIR /workspaces
 
-# Install Firely Terminal
-RUN dotnet tool install --global Firely.Terminal --version $FIRELY_TERMINAL_VERSION
-
-# Add .NET tools to PATH for vscode user
-ENV PATH="/home/vscode/.dotnet/tools:${PATH}"
-
-# Switch back to root user to perform remaining installations
-USER root
-
-RUN npm install -g fsh-sushi@$SUSHI_VERSION
-
-# Installieren der zusätzliche Abhängigkeiten
-RUN apk update && apk add --no-cache jq findutils curl ca-certificates
-
-# Setup for FHIR Validator
-RUN mkdir -p /home/vscode/.fhir/validators/
-RUN wget -q https://github.com/hapifhir/org.hl7.fhir.core/releases/download/$JAVA_VALIDATOR_VERSION/validator_cli.jar -O /home/vscode/.fhir/validators/validator_cli.jar
-
-# Set ownership
-RUN mkdir -p /home/vscode/.fhir/packages && \
-    chown -R vscode:vscode /home/vscode/.fhir/packages
-
-RUN mkdir -p /home/vscode/.fhir/settings/
-COPY codfsh-config.yaml /home/vscode/.fhir/settings/codfsh-config.yaml
-
-# Setzen des Arbeitsverzeichnis
-WORKDIR /workspace
-
-COPY . /workspace
-
-CMD [ "/bin/bash" ]
+# Create unprivileged user
+RUN useradd -m runner \
+ && mkdir -p /workspaces \
+ && chown -R runner:runner /workspaces \
+ && chsh -s /bin/bash runner \
+ && echo '[ -f /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion' >> /home/runner/.bashrc
+USER runner
