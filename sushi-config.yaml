@@ -1,5 +1,6 @@
 id: de.gefyra.isik.test
 name: ISiKTestGefyra
+version: 0.1.0
 status: active
 copyrightYear: 2025+
 releaseLabel: ci-build
