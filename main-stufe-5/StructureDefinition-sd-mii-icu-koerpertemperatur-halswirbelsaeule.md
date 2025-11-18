@@ -1,0 +1,148 @@
+# SD MII ICU Koerpertemperatur Halswirbelsaeule - v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **SD MII ICU Koerpertemperatur Halswirbelsaeule**
+
+## Resource Profile: SD MII ICU Koerpertemperatur Halswirbelsaeule 
+
+| | |
+| :--- | :--- |
+| *Official URL*:http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-halswirbelsaeule | *Version*:0.1.0 |
+| Active as of 2025-10-23 | *Computable Name*:SD_MII_ICU_Koerpertemperatur_Halswirbelsaeule |
+
+ 
+Dieses Profil dient der spezialisierten Abbildung der Körpertemperaturmessung an der Halswirbelsäule in der Akutmedizin. Es dient nicht der Abbildung der KörperKERNtemperatur (siehe dafür Profile zu Körperkerntemperatur im generischen Modul Vitalparameter bzw. abgeleitete Profile im ICU-Bereich). 
+
+**Usages:**
+
+* Examples for this Profile: [Observation/Koerpertemperatur-Halswirbelsaeule](Observation-Koerpertemperatur-Halswirbelsaeule.md)
+* CapabilityStatements using this Profile: [ISiK CapabilityStatement VitalSign ICU Source Extended](CapabilityStatement-ISiKCapabilityStatementVitalSignICUSourceExtendedRolle.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/info.gefyra.training|current/StructureDefinition/sd-mii-icu-koerpertemperatur-halswirbelsaeule)
+
+### Formal Views of Profile Content
+
+ [Description of Profiles, Differentials, Snapshots and how the different presentations work](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](StructureDefinition-sd-mii-icu-koerpertemperatur-halswirbelsaeule.csv), [Excel](StructureDefinition-sd-mii-icu-koerpertemperatur-halswirbelsaeule.xlsx), [Schematron](StructureDefinition-sd-mii-icu-koerpertemperatur-halswirbelsaeule.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "sd-mii-icu-koerpertemperatur-halswirbelsaeule",
+  "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-halswirbelsaeule",
+  "version" : "0.1.0",
+  "name" : "SD_MII_ICU_Koerpertemperatur_Halswirbelsaeule",
+  "title" : "SD MII ICU Koerpertemperatur Halswirbelsaeule",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-10-23",
+  "publisher" : "Gefyra GmbH",
+  "contact" : [
+    {
+      "name" : "Gefyra GmbH",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "https://gefyra.info/"
+        }
+      ]
+    }
+  ],
+  "description" : "Dieses Profil dient der spezialisierten Abbildung der Körpertemperaturmessung an der Halswirbelsäule in der Akutmedizin. Es dient nicht der Abbildung der KörperKERNtemperatur (siehe dafür Profile zu Körperkerntemperatur im generischen Modul Vitalparameter bzw. abgeleitete Profile im ICU-Bereich).",
+  "fhirVersion" : "4.0.1",
+  "mapping" : [
+    {
+      "identity" : "workflow",
+      "uri" : "http://hl7.org/fhir/workflow",
+      "name" : "Workflow Pattern"
+    },
+    {
+      "identity" : "sct-concept",
+      "uri" : "http://snomed.info/conceptdomain",
+      "name" : "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity" : "v2",
+      "uri" : "http://hl7.org/v2",
+      "name" : "HL7 v2 Mapping"
+    },
+    {
+      "identity" : "rim",
+      "uri" : "http://hl7.org/v3",
+      "name" : "RIM Mapping"
+    },
+    {
+      "identity" : "w5",
+      "uri" : "http://hl7.org/fhir/fivews",
+      "name" : "FiveWs Pattern Mapping"
+    },
+    {
+      "identity" : "sct-attr",
+      "uri" : "http://snomed.org/attributebinding",
+      "name" : "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "Observation",
+  "baseDefinition" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-generisch",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [
+      {
+        "id" : "Observation",
+        "path" : "Observation"
+      },
+      {
+        "id" : "Observation.code.coding",
+        "path" : "Observation.code.coding",
+        "min" : 2
+      },
+      {
+        "id" : "Observation.code.coding:sct",
+        "path" : "Observation.code.coding",
+        "sliceName" : "sct",
+        "min" : 1,
+        "max" : "1",
+        "patternCoding" : {
+          "system" : "http://snomed.info/sct",
+          "code" : "364419004"
+        }
+      },
+      {
+        "id" : "Observation.code.coding:IEEE-11073",
+        "path" : "Observation.code.coding",
+        "sliceName" : "IEEE-11073",
+        "max" : "0"
+      },
+      {
+        "id" : "Observation.code.coding:specific-loinc",
+        "path" : "Observation.code.coding",
+        "sliceName" : "specific-loinc",
+        "max" : "0"
+      },
+      {
+        "id" : "Observation.bodySite",
+        "path" : "Observation.bodySite",
+        "patternCodeableConcept" : {
+          "coding" : [
+            {
+              "system" : "http://snomed.info/sct",
+              "code" : "122494005"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+```

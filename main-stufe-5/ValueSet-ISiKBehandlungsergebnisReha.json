@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ISiKBehandlungsergebnisReha",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ISiKBehandlungsergebnisReha</b></p><a name=\"ISiKBehandlungsergebnisReha\"> </a><a name=\"hcISiKBehandlungsergebnisReha\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-ISiKBehandlungsergebnisRehaCS.html\"><code>http://gefyra.info/training/CodeSystem/ISiKBehandlungsergebnisRehaCS</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "http://gefyra.info/training/ValueSet/ISiKBehandlungsergebnisReha",
+  "version" : "0.1.0",
+  "name" : "ISiKBehandlungsergebnisRehaVS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-10-23",
+  "publisher" : "Gefyra GmbH",
+  "contact" : [{
+    "name" : "Gefyra GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://gefyra.info/"
+    }]
+  }],
+  "description" : "Behandlungsergebnis Reha gemäß §301(4 UND 4A) SGB V. Diagnosenbezogene Bewertung des Behandlungsergebnisses für einen Versicherten/Berechtigten bei Entlassung aus der Reha-Maßnahme bzw. Stellung eines Antrags auf Verlängerung. Vgl. Schlüsseltabelle 2.71 Diagnose - Behandlungsergebnis.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://gefyra.info/training/CodeSystem/ISiKBehandlungsergebnisRehaCS"
+    }]
+  }
+}

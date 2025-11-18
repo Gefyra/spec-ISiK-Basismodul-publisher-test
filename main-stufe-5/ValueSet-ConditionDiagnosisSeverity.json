@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ConditionDiagnosisSeverity",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ConditionDiagnosisSeverity</b></p><a name=\"ConditionDiagnosisSeverity\"> </a><a name=\"hcConditionDiagnosisSeverity\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicity stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where concept  is-a 24484000 (Severe)</li><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicity stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where concept  is-a 6736007 (Midgrade)</li><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicity stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where concept  is-a 255604002 (Mild)</li></ul></div>"
+  },
+  "url" : "http://gefyra.info/training/ValueSet/ConditionDiagnosisSeverity",
+  "version" : "0.1.0",
+  "name" : "ConditionDiagnosisSeverity",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-10-23",
+  "publisher" : "Gefyra GmbH",
+  "contact" : [{
+    "name" : "Gefyra GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://gefyra.info/"
+    }]
+  }],
+  "description" : "Enthaelt alle SNOMED DiagnosisSeverity Codes",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "24484000"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "6736007"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "255604002"
+      }]
+    }]
+  }
+}

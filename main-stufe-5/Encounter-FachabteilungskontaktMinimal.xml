@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="FachabteilungskontaktMinimal"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Encounter FachabteilungskontaktMinimal</b></p><a name="FachabteilungskontaktMinimal"> </a><a name="hcFachabteilungskontaktMinimal"> </a><p><b>identifier</b>: Visit number/0123456789</p><p><b>status</b>: Unknown</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP">ActCode: IMP</a> (inpatient encounter)</p><p><b>type</b>: <span title="Codes:{http://fhir.de/CodeSystem/kontaktart-de operation}">Operation</span>, <span title="Codes:{http://fhir.de/CodeSystem/Kontaktebene abteilungskontakt}">Abteilungskontakt</span></p><p><b>serviceType</b>: <span title="Codes:{http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel 0100}">Innere Medizin</span></p><p><b>subject</b>: <a href="Patient-PatientinMusterfrau.html">Erika Fürstin von Musterfrau (official) Female, DoB: 1964-08-12 ( Private Krankenversicherung (use: secondary, ))</a></p><p><b>period</b>: 2022-05-03 --&gt; 2022-05-05</p></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="VN"/>
+      </coding>
+    </type>
+    <system value="https://test.krankenhaus.de/fhir/sid/besuchsnummer"/>
+    <value value="0123456789"/>
+  </identifier>
+  <status value="unknown"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="IMP"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/kontaktart-de"/>
+      <code value="operation"/>
+    </coding>
+  </type>
+  <type>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/Kontaktebene"/>
+      <code value="abteilungskontakt"/>
+    </coding>
+  </type>
+  <serviceType>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+      <code value="0100"/>
+    </coding>
+  </serviceType>
+  <subject>
+    <reference value="Patient/PatientinMusterfrau"/>
+  </subject>
+  <period>
+    <start value="2022-05-03"/>
+    <end value="2022-05-05"/>
+  </period>
+</Encounter>

@@ -1,0 +1,525 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://dvmd.de/fhir/CodeSystem/kdl",
+      "version" : "2025",
+      "status" : "active",
+      "name" : "CodeSystemKDL",
+      "title" : "CodeSystem Klinische Dokumentenklassen-Liste (Version 2025)",
+      "description" : "Diese CodeSystem-Ressource definiert alle in der Klinischen Dokumentenklassen-Liste aktuell gültigen Codes.",
+      "oids" : ["1.2.276.0.76.5.553"],
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=dvmd.kdl.r4@2025.0.1&canonical=http://dvmd.de/fhir/ValueSet/kdl" : "ValueSet Klinische Dokumentenklassen-Liste (Version 2025)"
+    },
+    {
+      "url" : "http://fhir.de/CodeSystem/KontaktDiagnoseProzedur",
+      "version" : "1.5.4",
+      "status" : "active",
+      "name" : "KontaktDiagnoseProzedur",
+      "title" : "KontaktDiagnoseProzedur",
+      "description" : "Rolle/Relevanz von Diagnosen",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/Diagnosesubtyp" : "Diagnosesubtyp ValueSet",
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/DiagnoseTyp" : "DiagnoseTyp ValueSet"
+    },
+    {
+      "url" : "http://fhir.de/CodeSystem/Kontaktebene",
+      "version" : "1.5.4",
+      "status" : "active",
+      "name" : "Kontaktebene",
+      "title" : "Kontaktebene",
+      "description" : "CodeSystem für die Ebene eines Kontaktes mit einer Gesundheitseinrichtung",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/kontaktebene-de" : "KontaktebeneDe ValueSet"
+    },
+    {
+      "url" : "http://fhir.de/CodeSystem/bfarm/ops",
+      "version" : null,
+      "status" : "active",
+      "name" : "OPS",
+      "title" : "OPS",
+      "description" : "OPS Platzhalter-CodeSystem",
+      "uses" : {
+      },
+      "ValueSet-ExamplePrePopObservation_pflegegrad-de.html" : "PflegegradDE ValueSet",
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/bfarm/ops" : "OPS ValueSet"
+    },
+    {
+      "url" : "http://fhir.de/CodeSystem/common-meta-tag-de",
+      "version" : "1.5.4",
+      "status" : "active",
+      "name" : "CS_CommonMetaTag_De",
+      "title" : "CS Basisprofil Common Meta Tag DE",
+      "description" : "Gebräuchliche Codes zur Kodierung von Resource.meta.tag",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/common-meta-tag-de" : "VS_CommonMetaTag_De"
+    },
+    {
+      "url" : "http://fhir.de/CodeSystem/dgkev/Aufnahmeanlass",
+      "version" : "1.5.4",
+      "status" : "active",
+      "name" : "CodeSystemAufnahmeanlass",
+      "title" : "CodeSystemAufnahmeanlass",
+      "description" : "Aufnahmeanlass, Datenübermittlung nach § 301 Abs. 3 SGB V",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/dgkev/Aufnahmeanlass" : "Aufnahmeanlass ValueSet"
+    },
+    {
+      "url" : "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel",
+      "version" : "1.5.4",
+      "status" : "active",
+      "name" : "CodeSystemFachabteilungsschluessel",
+      "title" : "Fachabteilungsschluessel",
+      "description" : "Fachabteilungen gemäß Anhang 1 der BPflV in der am 31.12.2003 geltenden Fassung",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel" : "Fachabteilungsschlüssel ValueSet"
+    },
+    {
+      "url" : "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert",
+      "version" : "1.5.4",
+      "status" : "active",
+      "name" : "CodeSystemFachabteilungsschluesselErweitert",
+      "title" : "Fachabteilungsschluessel Erweitert",
+      "description" : "Fachabteilungen gemäß Anhang 1 der BPflV in der am 31.12.2003 geltenden Fassung inkl. Spezialisierungen",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert" : "FachabteilungsschluesselErweitert ValueSet"
+    },
+    {
+      "url" : "http://fhir.de/CodeSystem/kontaktart-de",
+      "version" : "1.5.4",
+      "status" : "active",
+      "name" : "KontaktArtDe",
+      "title" : "KontaktArtDe",
+      "description" : "Klassifizierung eines Kontaktes mit einer Gesundheitseinrichtung",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/kontaktart-de" : "KontaktartDe ValueSet"
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKBehandlungsergebnisRehaCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKBehandlungsergebnisReha",
+      "title" : null,
+      "description" : "Behandlungsergebnis Reha gemäß §301(4 UND 4A) SGB V. Diagnosenbezogene Bewertung des Behandlungsergebnisses für einen Versicherten/Berechtigten bei Entlassung aus der Reha-Maßnahme bzw. Stellung eines Antrags auf Verlängerung. Vgl. Schlüsseltabelle 2.71 Diagnose - Behandlungsergebnis.",
+      "uses" : {
+      },
+      "ValueSet-ISiKBehandlungsergebnisReha.html" : "ISiKBehandlungsergebnisRehaVS"
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKBesondereBehandlungsformRehaCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKBesondereBehandlungsformReha",
+      "title" : null,
+      "description" : "Besondere Behandlungsform der Reha gemäß §301(4 UND 4A) SGB V. Vgl. Schlüsseltabelle 2.51 Besondere Behandlungsformen.",
+      "uses" : {
+      },
+      "ValueSet-ISiKBesondereBehandlungsformReha.html" : "ISiKBesondereBehandlungsformRehaVS"
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKEntlassformRehaCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKEntlassformReha",
+      "title" : null,
+      "description" : "ISiK Entlassform Reha. Beschreibt Form und ggf. Weiterbehandlung der Entlassung eines Versicherten/Berechtigten aus verwaltungs- und medizinischer Sicht. Vgl. Schlüsseltabelle 2.107 Entlassungsform.",
+      "uses" : {
+      },
+      "ValueSet-ISiKEntlassformReha.html" : "ISiKEntlassformRehaVS"
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKMDRRelevanzFormularCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKMDRRelevanzFormular",
+      "title" : null,
+      "description" : "",
+      "uses" : {
+      },
+      "ValueSet-ISiKMDRRelevanzFormularVS.html" : "ISiKMDRRelevanzFormularVS"
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKMedikationsartCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKMedikationsartCS",
+      "title" : "ISiK Medikationsart",
+      "description" : "ISiK Therapiearten für Medikation",
+      "uses" : {
+      },
+      "ValueSet-ISiKMedikationsartVS.html" : "ISiKMedikationsartVS"
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKSubscriptionTopic",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKSubscriptionTopic",
+      "title" : "ISiK-SubscriptionTopic",
+      "description" : "Liste der aller SubscriptionTopics, die in ISiK verwendet werden können. Neben den merge-SubscriptionTopics sind auch die SubscriptionTopics für Updates der Ressourcen enthalten, die in ISiK verwendet werden können.",
+      "uses" : {
+      },
+      "ValueSet-ISiKSubscriptionTopicVS.html" : "ISiKSubscriptionTopic ValueSet"
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKUnterbrechungRehaCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKUnterbrechungReha",
+      "title" : null,
+      "description" : "ISiK Unterbrechung Reha. Dokumentiert die relevanten Gründe einer Unterbrechung einer Rehabilitationsmaßnahme im Einzelfall. Vgl. Schlüsseltabelle 2.111 Erläuterung zur Unterbrechung.",
+      "uses" : {
+      },
+      "ValueSet-ISiKUnterbrechungReha.html" : "ISiKUnterbrechungRehaVS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/composition-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CompositionStatus",
+      "title" : "CompositionStatus",
+      "description" : "The workflow/clinical status of the composition.",
+      "oids" : ["2.16.840.1.113883.4.642.4.242"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-composition-status.html" : "CompositionStatus"
+    },
+    {
+      "url" : "http://hl7.org/fhir/encounter-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EncounterStatus",
+      "title" : "EncounterStatus",
+      "description" : "Current state of the encounter.",
+      "oids" : ["2.16.840.1.113883.4.642.4.247"],
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/EncounterStatusDe" : "Encounter Status ValueSet"
+    },
+    {
+      "url" : "http://hl7.org/fhir/list-mode",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ListMode",
+      "title" : "ListMode",
+      "description" : "The processing mode that applies to this list.",
+      "oids" : ["2.16.840.1.113883.4.642.4.319"],
+      "uses" : {
+      },
+      "ValueSet-MedikationsListeListModeVS.html" : "Medikationslisten-Modes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/resource-types",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ResourceType",
+      "title" : "ResourceType",
+      "description" : "One of the resource types defined as part of this version of FHIR.",
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-resource-types.html" : "ResourceType"
+    },
+    {
+      "url" : "http://hl7.org/fhir/subscription-notification-type",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "SubscriptionNotificationTypeCS",
+      "title" : "SubscriptionNotificationType",
+      "description" : "The type of notification represented by the status message.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1524"],
+      "uses" : {
+      },
+      "ValueSet-subscription-notification-type.html" : "SubscriptionNotificationType"
+    },
+    {
+      "url" : "http://hl7.org/fhir/subscription-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubscriptionStatus",
+      "title" : "SubscriptionStatus",
+      "description" : "The status of a subscription.",
+      "oids" : ["2.16.840.1.113883.4.642.4.503"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-subscription-status.html" : "SubscriptionStatus"
+    },
+    {
+      "url" : "http://ihe-d.de/CodeSystems/DeutscheDokumentenformate",
+      "version" : "2018-12-14T17:07:12",
+      "status" : "active",
+      "name" : "DeutscheDokumentenformate",
+      "title" : "Deutsche Dokumentenformate",
+      "description" : "",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&canonical=http://ihe-d.de/ValueSets/IHEXDSformatCodeDE" : "IHE XDS formatCode"
+    },
+    {
+      "url" : "http://ihe-d.de/CodeSystems/DokumentenWarnhinweise",
+      "version" : "2021-07-06T21:19:41",
+      "status" : "active",
+      "name" : "DokumentenWarnhinweise",
+      "title" : "Dokumenten Warnhinweise",
+      "description" : "",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&canonical=http://ihe-d.de/ValueSets/IHEXDSeventCodeList" : "IHE XDS eventCodeList"
+    },
+    {
+      "url" : "http://ihe-d.de/CodeSystems/FallkontextBeiDokumentenerstellung",
+      "version" : "2021-07-06T21:19:41",
+      "status" : "active",
+      "name" : "FallkontextBeiDokumentenerstellung",
+      "title" : "Fallkontext Bei Dokumentenerstellung",
+      "description" : "",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&canonical=http://ihe-d.de/ValueSets/IHEXDSeventCodeList" : "IHE XDS eventCodeList"
+    },
+    {
+      "url" : "http://ihe-d.de/CodeSystems/IHEXDSclassCode",
+      "version" : "2021-06-25T13:44:47",
+      "status" : "active",
+      "name" : "IHEXDSclassCode",
+      "title" : " IHEXDSclassCode",
+      "description" : "",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&canonical=http://ihe-d.de/ValueSets/IHEXDSclassCode" : "IHE XDS classCode"
+    },
+    {
+      "url" : "http://ihe-d.de/CodeSystems/IHEXDStypeCode",
+      "version" : "2020-02-07T07:55:58",
+      "status" : "active",
+      "name" : "IHEXDStypeCode",
+      "title" : "IHEXDStypeCode",
+      "description" : "",
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&canonical=http://ihe-d.de/ValueSets/IHEXDStypeCode" : "IHE XDS typeCode"
+    },
+    {
+      "url" : "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "IHE_FormatCode_codesystem",
+      "title" : "IHE Format Code set for use with Document Sharing",
+      "description" : "The [IHE](http://www.ihe.net) FormatCode code system with canonical URI of http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode is defined to be the set of FormatCodes define by IHE, for use with [Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html). This code set additionally includes, as deprecated, format codes defined by [HL7 for some Implementation Guides](http://wiki.hl7.org/index.php?title=CDA_Format_Codes_for_IHE_XDS). The HL7 codes are now managed by HL7. The set of IHE FormatCode codes was listed in HITSP C80 Table 2-153 Format Code Value Set Definition, but since has been updated. The use of the FormatCode specifies the technical format of the document. The FormatCode tends to reference the IHE Content Profile (Implementation Guide) that defines the use-case and constraints. The FormatCode is a further specialization more detailed than the mime-type. The FormatCode provides sufficient metadata information to allow any potential document content consumer to know if it can process and/or display by identifying a document encoding, structure and template. The set of codes is intended to be preferred.",
+      "oids" : ["1.3.6.1.4.1.19376.1.2.3"],
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&canonical=http://ihe-d.de/ValueSets/IHEXDSeventCodeList" : "IHE XDS eventCodeList"
+    },
+    {
+      "url" : "http://loinc.org",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "LOINC",
+      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+      "oids" : ["2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "ValueSet-ObservationCodesPCT.html" : "ObservationCodesPCT",
+      "ValueSet-SchwangerschaftsstatusVS.html" : "Schwangerschaftsstatus Valueset",
+      "https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&canonical=http://ihe-d.de/ValueSets/IHEXDSclassCode" : "IHE XDS classCode",
+      "ValueSet-current-smoking-status-uv-ips.html" : "Current Smoking Status - IPS",
+      "ValueSet-ObservationCodesThrombozyten.html" : "ObservationCodesThrombozyten",
+      "ValueSet-ObservationCodesHb.html" : "ObservationCodesHb",
+      "ValueSet-ObservationCodesCRP.html" : "ObservationCodesCRP",
+      "https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&canonical=http://ihe-d.de/ValueSets/IHEXDStypeCode" : "IHE XDS typeCode",
+      "ValueSet-ObservationCodesTSH.html" : "ObservationCodesTSH",
+      "ValueSet-SchwangerschaftEtMethodeVS.html" : "Schwangerschaft Erwarteter Entbindungstermin Methode",
+      "ValueSet-ISiKSpecificGenericTempLoincVS.html" : "ISiK Specific Generische Koerpertemperatur LOINC Konzepte",
+      "ValueSet-ObservationCodesGFR.html" : "ObservationCodesGFR",
+      "ValueSet-StillstatusVS.html" : "Stillstatus LOINC Antwortoptionen",
+      "ValueSet-ISiKSpecificKernTempLoincVS.html" : "ISiK Specific Kerntemperatur LOINC ValueSet",
+      "ValueSet-vs-mii-icu-code-monitoring-und-vitaldaten-loinc.html" : "VS MII ICU Code Monitoring und Vitaldaten [LOINC]",
+      "ValueSet-ObservationCodesTroponin.html" : "ObservationCodesTroponin",
+      "ValueSet-ObservationCodesSerumkreatinin.html" : "ObservationCodesSerumkreatinin"
+    },
+    {
+      "url" : "http://snomed.info/sct",
+      "version" : null,
+      "status" : "active",
+      "name" : "SNOMED_CT",
+      "title" : "SNOMED CT (all versions)",
+      "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+      "oids" : ["2.16.840.1.113883.6.96"],
+      "uses" : {
+      },
+      "ValueSet-ISiKKernTempSctVS.html" : "ISiK  Kerntemperatur SnomedCT ValueSet",
+      "ValueSet-SctRouteOfAdministration.html" : "SctRouteOfAdministration",
+      "ValueSet-vs-mii-icu-code-monitoring-und-vitaldaten-snomed.html" : "VS MII ICU Code Monitoring und Vitaldaten [sct]",
+      "ValueSet-ProzedurenCodesSCT.html" : "ProzedurenCodesSCT",
+      "ValueSet-vs-mii-icu-bodysite-observation-blutdruck.html" : "VS MII ICU BodySite Observation Blutdruck",
+      "ValueSet-EncounterReasonCodes.html" : "EncounterReasonCodes",
+      "https://simplifier.net/resolve?scope=de.gematik.terminology@1.0.6&canonical=https://gematik.de/fhir/terminology/ValueSet/ti-medication-snomed-ct-vs" : "TI Arzneimittel SNOMED CT ValueSet",
+      "ValueSet-vs-mii-icu-bodysite-observation-monitoring-und-vitaldaten.html" : "VS MII ICU BodySite Observation Monitoring und Vitaldaten",
+      "ValueSet-vs-mii-icu-method-observation-blutdruck.html" : "VS MII ICU Method Observation Blutdruck",
+      "ValueSet-ISiKTerminPriority.html" : "ISiKTerminPriority",
+      "ValueSet-DiagnosesSCT.html" : "DiagnosesSCT",
+      "ValueSet-ConditionDiagnosisSeverity.html" : "ConditionDiagnosisSeverity",
+      "ValueSet-ProzedurenKategorieSCT.html" : "ProzedurenKategorieSCT"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason",
+      "version" : "2.1.1",
+      "status" : "active",
+      "name" : "AppointmentCancellationReason",
+      "title" : "Appointment cancellation reason",
+      "description" : "This example value set defines a set of reasons for the cancellation of an appointment.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1382"],
+      "uses" : {
+      },
+      "ValueSet-ISiKTerminCancelationReason.html" : "ISiKTerminCancelationReason"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/conformance-expectation",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "ConformanceExpectation",
+      "title" : "ConformanceExpectation",
+      "description" : "Indicates the degree of adherence to a specified behavior or capability expected for a system to be deemed conformant with a specification.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1271"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/7.0.0/ValueSet-conformance-expectation.html" : "ConformanceExpectation"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+      "version" : "1.1.1",
+      "status" : "active",
+      "name" : "DiagnosisRole",
+      "title" : "Diagnosis Role",
+      "description" : "This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1054"],
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/Diagnosesubtyp" : "Diagnosesubtyp ValueSet"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "LocationType",
+      "title" : "Location type",
+      "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.\r\rThis includes several 'non physical' codes which are still considered a location.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1108"],
+      "uses" : {
+      },
+      "ValueSet-ISiKLocationPhysicalType.html" : "ISiKLocationPhysicalType"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "OrganizationType",
+      "title" : "Organization type",
+      "description" : "This example value set defines a set of codes that can be used to indicate a type of organization.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1128"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-organization-type.html" : "Organization type"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/risk-probability",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "RiskProbability",
+      "title" : "Risk Probability",
+      "description" : "Codes representing the likelihood of a particular outcome in a risk assessment.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1133"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-risk-probability.html" : "Risk Probability"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v2-0116",
+      "version" : "2.2.0",
+      "status" : "active",
+      "name" : "BedStatus",
+      "title" : "bedStatus",
+      "description" : "Code system of concepts which specify the state of a bed in an inpatient setting, and is used to determine if a patient may be assigned to it or not.  Used in HL7 Version 2.x messaging in the DLD and PV1 segments.",
+      "oids" : ["2.16.840.1.113883.18.47"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/7.0.0/ValueSet-v2-0116.html" : "hl7VS-bedStatus"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v2-0532",
+      "version" : "2.1.0",
+      "status" : "active",
+      "name" : "ExpandedYesNoIndicator",
+      "title" : "expandedYes-NoIndicator",
+      "description" : "HL7-defined code system of concepts used to specify an expansion on the original Yes/No indicator table by including \"flavors of null\".  It is intended to be applied to fields where the response is not limited to \"yes\" or \"no\".  Used in numerous locations in HL7 Version 2.x messaging.",
+      "oids" : ["2.16.840.1.113883.18.347"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/7.0.0/ValueSet-yes-no-unknown-not-asked.html" : "Yes No Unknown NotAsked"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "version" : "9.0.0",
+      "status" : "active",
+      "name" : "ActCode",
+      "title" : "ActCode",
+      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "oids" : ["2.16.840.1.113883.5.4"],
+      "uses" : {
+      },
+      "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/EncounterClassDE" : "EncounterClassDE",
+      "ValueSet-ISiKAccountType.html" : "ISiKAccountType"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "Confidentiality",
+      "title" : "Confidentiality",
+      "description" : "A set of codes specifying the security classification of acts and roles in accordance with the definition for concept domain \"Confidentiality\".",
+      "oids" : ["2.16.840.1.113883.5.25"],
+      "uses" : {
+      },
+      "ValueSet-ISiKConfidentialityCodes.html" : "ISiKConfidentialityCodes"
+    },
+    {
+      "url" : "http://unitsofmeasure.org",
+      "version" : "3.0.1",
+      "status" : "active",
+      "name" : "UCUM",
+      "title" : "Unified Code for Units of Measure (UCUM)",
+      "description" : "The Unified Code for Units of Measure (UCUM) is a code system intended to include all units of measures being contemporarily used in international science, engineering, and business. The purpose is to facilitate unambiguous electronic communication of quantities together with their units. The focus is on electronic communication, as opposed to communication between humans. A typical application of The Unified Code for Units of Measure are electronic data interchange (EDI) protocols, but there is nothing that prevents it from being used in other types of machine communication.",
+      "oids" : ["2.16.840.1.113883.6.8"],
+      "uses" : {
+      },
+      "ValueSet-ObservationUnitsHb.html" : "ObservationUnitsHb",
+      "ValueSet-ObservationUnitsCRP.html" : "ObservationUnitsCRP",
+      "ValueSet-ObservationUnitsGFR.html" : "ObservationUnitsGFR",
+      "ValueSet-ObservationUnitsTSH.html" : "ObservationUnitsTSH",
+      "ValueSet-ObservationUnitsTroponin.html" : "ObservationUnitsTroponin",
+      "ValueSet-ObservationUnitsThrombozyten.html" : "ObservationUnitsThrombozyten",
+      "ValueSet-ObservationUnitsSerumkreatinin.html" : "ObservationUnitsSerumkreatinin",
+      "ValueSet-ObservationUnitsPCT.html" : "ObservationUnitsPCT"
+    },
+    {
+      "url" : "urn:iso:std:iso:11073:10101",
+      "version" : "20250520",
+      "status" : "active",
+      "name" : "Mdc",
+      "title" : "ISO/IEEE 11073 Medical Device Communication Nomenclature",
+      "description" : "The nomenclature relates primarily to vital signs monitoring, but also includes semantics of other medical devices that are commonly used in acute care settings. There are multiple coding partitions each of which has a systematic name consisting of a set of base concepts and differentiating criteria.",
+      "oids" : ["2.16.840.1.113883.6.24"],
+      "uses" : {
+      },
+      "ValueSet-vs-mii-icu-code-monitoring-und-vitaldaten-iso11073.html" : "VS MII ICU Code Monitoring und Vitaldaten [ISO11073]"
+    }
+  ]
+}

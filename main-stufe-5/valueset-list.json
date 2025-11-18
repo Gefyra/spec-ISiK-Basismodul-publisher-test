@@ -1,0 +1,482 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://example.org/fhir/ValueSet/TestValueSet",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "TestValueSet",
+      "title" : null,
+      "description" : ""
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ConditionDiagnosisSeverity",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ConditionDiagnosisSeverity",
+      "title" : null,
+      "description" : "Enthaelt alle SNOMED DiagnosisSeverity Codes",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/DiagnosesSCT",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "DiagnosesSCT",
+      "title" : null,
+      "description" : "Enthaelt alle SNOMED Clinical finding, Event und Situation with explicit context codes",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/EncounterReasonCodes",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "EncounterReasonCodes",
+      "title" : null,
+      "description" : "Enthaelt alle SNOMED Reason Codes",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/FhirMimeTypeVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "FhirMimeTypeVS",
+      "title" : "FhirMimeTypeVS",
+      "description" : "FHIR Mime Types",
+      "systems" : ["urn:ietf:bcp:13"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKAccountType",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKAccountType",
+      "title" : "ISiKAccountType",
+      "description" : "",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKBehandlungsergebnisReha",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKBehandlungsergebnisRehaVS",
+      "title" : null,
+      "description" : "Behandlungsergebnis Reha gemäß §301(4 UND 4A) SGB V. Diagnosenbezogene Bewertung des Behandlungsergebnisses für einen Versicherten/Berechtigten bei Entlassung aus der Reha-Maßnahme bzw. Stellung eines Antrags auf Verlängerung. Vgl. Schlüsseltabelle 2.71 Diagnose - Behandlungsergebnis.",
+      "systems" : [
+        "http://gefyra.info/training/CodeSystem/ISiKBehandlungsergebnisRehaCS"
+      ]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKBesondereBehandlungsformReha",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKBesondereBehandlungsformRehaVS",
+      "title" : null,
+      "description" : "Besondere Behandlungsform der Reha gemäß §301(4 UND 4A) SGB V. Vgl. Schlüsseltabelle 2.51 Besondere Behandlungsformen.",
+      "systems" : [
+        "http://gefyra.info/training/CodeSystem/ISiKBesondereBehandlungsformRehaCS"
+      ]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKConfidentialityCodes",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKConfidentialityCodes",
+      "title" : "ISiKConfidentialityCodes",
+      "description" : "Vertraulichkeitsstufen",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Confidentiality"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKEntlassformReha",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKEntlassformRehaVS",
+      "title" : null,
+      "description" : "ISiK Entlassform Reha. Beschreibt Form und ggf. Weiterbehandlung der Entlassung eines Versicherten/Berechtigten aus verwaltungs- und medizinischer Sicht. Vgl. Schlüsseltabelle 2.107 Entlassungsform.",
+      "systems" : [
+        "http://gefyra.info/training/CodeSystem/ISiKEntlassformRehaCS"
+      ]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKKernTempSctVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKKernTempSctVS",
+      "title" : "ISiK  Kerntemperatur SnomedCT ValueSet",
+      "description" : "ValueSet der Körperkerntemperatur SnomedCT Konzepte",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKLocationPhysicalType",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKLocationPhysicalType",
+      "title" : null,
+      "description" : "",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/location-physical-type"
+      ]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKMDRRelevanzFormularVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKMDRRelevanzFormularVS",
+      "title" : null,
+      "description" : "",
+      "systems" : [
+        "http://gefyra.info/training/CodeSystem/ISiKMDRRelevanzFormularCS"
+      ]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKMedikationsartVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKMedikationsartVS",
+      "title" : null,
+      "description" : "ISiK Therapiearten für Medikation",
+      "systems" : [
+        "http://gefyra.info/training/CodeSystem/ISiKMedikationsartCS"
+      ]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKSpecificGenericTempLoincVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKSpecificGenericTempLoincVS",
+      "title" : "ISiK Specific Generische Koerpertemperatur LOINC Konzepte",
+      "description" : "ValueSet der spezifischen generischen Körperkerntemperatur LOINC Konzepte die nicht dazu dienen eine Körperkerntemperatur zu messen",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKSpecificKernTempLoincVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKSpecificKernTempLoincVS",
+      "title" : "ISiK Specific Kerntemperatur LOINC ValueSet",
+      "description" : "ValueSet der spezifischen Körperkerntemperatur LOINC Konzepte",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKSubscriptionTopicVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKSubscriptionTopicVS",
+      "title" : "ISiKSubscriptionTopic ValueSet",
+      "description" : "ValueSet, das alle Codes des ISiKSubscriptionTopic CodeSystems enthält",
+      "systems" : [
+        "http://gefyra.info/training/CodeSystem/ISiKSubscriptionTopic"
+      ]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKTerminCancelationReason",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKTerminCancelationReason",
+      "title" : null,
+      "description" : "Enthaelt alle erlaubten Gruende fuer eine Stornierung eines ISiKTermins",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
+      ]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKTerminPriority",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKTerminPriority",
+      "title" : null,
+      "description" : "Enthaelt alle SNOMED Codes, die eine valide Priorität für den ISiKTermin sind",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ISiKUnterbrechungReha",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKUnterbrechungRehaVS",
+      "title" : null,
+      "description" : "ISiK Unterbrechung Reha. Dokumentiert die relevanten Gründe einer Unterbrechung einer Rehabilitationsmaßnahme im Einzelfall. Vgl. Schlüsseltabelle 2.111 Erläuterung zur Unterbrechung.",
+      "systems" : [
+        "http://gefyra.info/training/CodeSystem/ISiKUnterbrechungRehaCS"
+      ]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/MedikationsListeListModeVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "MedikationsListeListModeVS",
+      "title" : "Medikationslisten-Modes",
+      "description" : "Erlaubte ListModes der ISiK MedikationsListe",
+      "systems" : ["http://hl7.org/fhir/list-mode"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationCodesCRP",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationCodesCRP",
+      "title" : null,
+      "description" : "Enthält LOINC-Codes für die Observation CRP",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationCodesGFR",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationCodesGFR",
+      "title" : null,
+      "description" : "Enthält LOINC-Codes für die Observation GFR",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationCodesHb",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationCodesHb",
+      "title" : null,
+      "description" : "Enthält LOINC-Codes für die Observation Hb",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationCodesPCT",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationCodesPCT",
+      "title" : null,
+      "description" : "Enthält LOINC-Codes für die Observation PCT",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationCodesSerumkreatinin",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationCodesSerumkreatinin",
+      "title" : null,
+      "description" : "Enthält LOINC-Codes für die Observation Serumkreatinin",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationCodesTSH",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationCodesTSH",
+      "title" : null,
+      "description" : "Enthält LOINC-Codes für die Observation TSH",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationCodesThrombozyten",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationCodesThrombozyten",
+      "title" : null,
+      "description" : "Enthält LOINC-Codes für die Observation Thrombozyten",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationCodesTroponin",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationCodesTroponin",
+      "title" : null,
+      "description" : "Enthält LOINC-Codes für die Observation Troponin",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsCRP",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationUnitsCRP",
+      "title" : null,
+      "description" : "Enthält UCUM-Einheiten für die Observation CRP",
+      "systems" : ["http://unitsofmeasure.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsGFR",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationUnitsGFR",
+      "title" : null,
+      "description" : "Enthält UCUM-Einheiten für die Observation GFR",
+      "systems" : ["http://unitsofmeasure.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsHb",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationUnitsHb",
+      "title" : null,
+      "description" : "Enthält UCUM-Einheiten für die Observation Hb",
+      "systems" : ["http://unitsofmeasure.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsPCT",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationUnitsPCT",
+      "title" : null,
+      "description" : "Enthält UCUM-Einheiten für die Observation PCT",
+      "systems" : ["http://unitsofmeasure.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsSerumkreatinin",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationUnitsSerumkreatinin",
+      "title" : null,
+      "description" : "Enthält UCUM-Einheiten für die Observation Serumkreatinin",
+      "systems" : ["http://unitsofmeasure.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsTSH",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationUnitsTSH",
+      "title" : null,
+      "description" : "Enthält UCUM-Einheiten für die Observation TSH",
+      "systems" : ["http://unitsofmeasure.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsThrombozyten",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationUnitsThrombozyten",
+      "title" : null,
+      "description" : "Enthält UCUM-Einheiten für die Observation Thrombozyten",
+      "systems" : ["http://unitsofmeasure.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsTroponin",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ObservationUnitsTroponin",
+      "title" : null,
+      "description" : "Enthält UCUM-Einheiten für die Observation Troponin",
+      "systems" : ["http://unitsofmeasure.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ProzedurenCodesSCT",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ProzedurenCodesSCT",
+      "title" : null,
+      "description" : "Enthaelt alle SNOMED Procedure Codes",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/ProzedurenKategorieSCT",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ProzedurenKategorieSCT",
+      "title" : null,
+      "description" : "Enthaelt alle SNOMED Codes für ein Mapping der OPS Klassentitel",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/SchwangerschaftEtMethodeVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "SchwangerschaftEtMethodeVS",
+      "title" : "Schwangerschaft Erwarteter Entbindungstermin Methode",
+      "description" : "",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/SchwangerschaftsstatusVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "SchwangerschaftsstatusVS",
+      "title" : "Schwangerschaftsstatus Valueset",
+      "description" : "",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/SctRouteOfAdministration",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "SctRouteOfAdministration",
+      "title" : null,
+      "description" : "Enthaelt alle SNOMED CT Administrationsarten",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/StillstatusVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "StillstatusVS",
+      "title" : "Stillstatus LOINC Antwortoptionen",
+      "description" : "Dieses Valueset enthält die Codes zur Beschreibung von Stillstatus LOINC.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/current-smoking-status-uv-ips",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CurrentSmokingStatusUvIps",
+      "title" : "Current Smoking Status - IPS",
+      "description" : "HL7 LOINC value set for smoking status.  Based on the HL7 Vocab and Structured Doc WG (formerly TC) consensus - per US CDC submission 7/12/2012 for smoking status terms.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-bodysite-observation-blutdruck",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VS_MII_ICU_BodySite_Observation_Blutdruck",
+      "title" : "VS MII ICU BodySite Observation Blutdruck",
+      "description" : "Dieses ValueSet enthält Codes für bodySites von Blutdrücken (pulsatilen Drücken).",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-bodysite-observation-monitoring-und-vitaldaten",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VS_MII_ICU_BodySite_Observation_Monitoring_und_Vitaldaten",
+      "title" : "VS MII ICU BodySite Observation Monitoring und Vitaldaten",
+      "description" : "Dieses ValueSet enthält Codes für bodySites von Vitaldaten sowie Daten aus dem Patientenmonitoring.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-code-monitoring-und-vitaldaten-iso11073",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VS_MII_ICU_Code_Monitoring_und_Vitaldaten_ISO11073",
+      "title" : "VS MII ICU Code Monitoring und Vitaldaten [ISO11073]",
+      "description" : "Dieses ValueSet enthält Codes für Vitaldaten sowie Daten aus dem Patientenmonitoring.",
+      "systems" : ["urn:iso:std:iso:11073:10101"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-code-monitoring-und-vitaldaten-loinc",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VS_MII_ICU_Code_Monitoring_und_Vitaldaten_LOINC",
+      "title" : "VS MII ICU Code Monitoring und Vitaldaten [LOINC]",
+      "description" : "Dieses ValueSet enthält Codes für Vitaldaten sowie Daten aus dem Patientenmonitoring.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-code-monitoring-und-vitaldaten-snomed",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VS_MII_ICU_Code_Monitoring_und_Vitaldaten_SNOMED",
+      "title" : "VS MII ICU Code Monitoring und Vitaldaten [sct]",
+      "description" : "Dieses ValueSet enthaelt Codes fuer Vitaldaten sowie Daten aus dem Patientenmonitoring.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-method-observation-blutdruck",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VS_MII_ICU_Method_Observation_Blutdruck",
+      "title" : "VS MII ICU Method Observation Blutdruck",
+      "description" : "Dieses ValueSet enthält Codes zur Angabe, ob ein Blutdruck invasiv oder nicht-invasiv gemessen ist.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/subscription-notification-type",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "SubscriptionNotificationTypeVS",
+      "title" : "SubscriptionNotificationType",
+      "description" : "The type of notification represented by the status message.",
+      "systems" : ["http://hl7.org/fhir/subscription-notification-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1523"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1523"]
+    }
+  ]
+}

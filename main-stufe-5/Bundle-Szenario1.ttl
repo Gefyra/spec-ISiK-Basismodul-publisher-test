@@ -1,0 +1,635 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://gefyra.info/training/Bundle/Szenario1> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Szenario1"] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [
+       fhir:v "https://example.com/fhir/Patient/SZ1Patient"^^xsd:anyURI ;
+       fhir:l <https://example.com/fhir/Patient/SZ1Patient>
+     ] ;
+     fhir:resource ( <https://example.com/fhir/Patient/SZ1Patient> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/fhir/RelatedPerson/SZ1Mutter"^^xsd:anyURI ;
+       fhir:l <https://example.com/fhir/RelatedPerson/SZ1Mutter>
+     ] ;
+     fhir:resource ( <https://example.com/fhir/RelatedPerson/SZ1Mutter> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/fhir/Coverage/SZ1VersicherungGesetzlich"^^xsd:anyURI ;
+       fhir:l <https://example.com/fhir/Coverage/SZ1VersicherungGesetzlich>
+     ] ;
+     fhir:resource ( <https://example.com/fhir/Coverage/SZ1VersicherungGesetzlich> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/fhir/Coverage/SZ1VersicherungSelbstzahler"^^xsd:anyURI ;
+       fhir:l <https://example.com/fhir/Coverage/SZ1VersicherungSelbstzahler>
+     ] ;
+     fhir:resource ( <https://example.com/fhir/Coverage/SZ1VersicherungSelbstzahler> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/fhir/Encounter/SZ1Vorstationaer"^^xsd:anyURI ;
+       fhir:l <https://example.com/fhir/Encounter/SZ1Vorstationaer>
+     ] ;
+     fhir:resource ( <https://example.com/fhir/Encounter/SZ1Vorstationaer> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/fhir/Encounter/SZ1Stationaer"^^xsd:anyURI ;
+       fhir:l <https://example.com/fhir/Encounter/SZ1Stationaer>
+     ] ;
+     fhir:resource ( <https://example.com/fhir/Encounter/SZ1Stationaer> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/fhir/Encounter/SZ1Nachstationaer"^^xsd:anyURI ;
+       fhir:l <https://example.com/fhir/Encounter/SZ1Nachstationaer>
+     ] ;
+     fhir:resource ( <https://example.com/fhir/Encounter/SZ1Nachstationaer> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://example.com/fhir/Account/SZ1DRGFall"^^xsd:anyURI ;
+       fhir:l <https://example.com/fhir/Account/SZ1DRGFall>
+     ] ;
+     fhir:resource ( <https://example.com/fhir/Account/SZ1DRGFall> )
+  ] ) . # 
+
+<https://example.com/fhir/Patient/SZ1Patient> a fhir:Patient ;
+  fhir:id [ fhir:v "SZ1Patient"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ISiKPatient"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ISiKPatient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_SZ1Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient SZ1Patient</b></p><a name=\"SZ1Patient\"> </a><a name=\"hcSZ1Patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKPatient.html\">ISiKPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">Medical record number/12345</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://fhir.de/CodeSystem/identifier-type-de-basis"^^xsd:anyURI ;
+           fhir:l <http://fhir.de/CodeSystem/identifier-type-de-basis>
+         ] ;
+         fhir:code [ fhir:v "KVZ10" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://fhir.de/sid/gkv/kvid-10"^^xsd:anyURI ;
+       fhir:l <http://fhir.de/sid/gkv/kvid-10>
+     ] ;
+     fhir:value [ fhir:v "A123456789" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "MR" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://beispiel-krankenhaus.de/sid/Patienten"^^xsd:anyURI ;
+       fhir:l <http://beispiel-krankenhaus.de/sid/Patienten>
+     ] ;
+     fhir:value [ fhir:v "12345" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Musterfrau" ] ;
+     fhir:given ( [ fhir:v "Töchterchen" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "2010-01-01"^^xsd:date] . # 
+
+<https://example.com/fhir/RelatedPerson/SZ1Mutter> a fhir:RelatedPerson ;
+  fhir:id [ fhir:v "SZ1Mutter"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ISiKAngehoeriger"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ISiKAngehoeriger>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_SZ1Mutter\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson SZ1Mutter</b></p><a name=\"SZ1Mutter\"> </a><a name=\"hcSZ1Mutter\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKAngehoeriger.html\">ISiKAngehoeriger</a></p></div><p><b>identifier</b>: Krankenversichertennummer/A987654321</p><p><b>patient</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\">mother</span></p><p><b>name</b>: Mama Musterfrau (Official)</p><p><b>address</b>: Milchstr. 42 Beispielstadt 78143 DE </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://fhir.de/CodeSystem/identifier-type-de-basis"^^xsd:anyURI ;
+           fhir:l <http://fhir.de/CodeSystem/identifier-type-de-basis>
+         ] ;
+         fhir:code [ fhir:v "KVZ10" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://fhir.de/sid/gkv/kvid-10"^^xsd:anyURI ;
+       fhir:l <http://fhir.de/sid/gkv/kvid-10>
+     ] ;
+     fhir:value [ fhir:v "A987654321" ]
+  ] ) ; # 
+  fhir:patient [
+     fhir:l <http://gefyra.info/training/Patient/SZ1Patient> ;
+     fhir:reference [ fhir:v "Patient/SZ1Patient" ]
+  ] ; # 
+  fhir:relationship ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RoleCode>
+       ] ;
+       fhir:code [ fhir:v "MTH" ]
+     ] )
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Musterfrau" ] ;
+     fhir:given ( [ fhir:v "Mama" ] )
+  ] ) ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "both" ] ;
+     fhir:line ( [ fhir:v "Milchstr. 42" ] ) ;
+     fhir:city [ fhir:v "Beispielstadt" ] ;
+     fhir:postalCode [ fhir:v "78143" ] ;
+     fhir:country [ fhir:v "DE" ]
+  ] ) . # 
+
+<https://example.com/fhir/Coverage/SZ1VersicherungGesetzlich> a fhir:Coverage ;
+  fhir:id [ fhir:v "SZ1VersicherungGesetzlich"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisGesetzlich"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisGesetzlich>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Coverage_SZ1VersicherungGesetzlich\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Coverage SZ1VersicherungGesetzlich</b></p><a name=\"SZ1VersicherungGesetzlich\"> </a><a name=\"hcSZ1VersicherungGesetzlich\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKVersicherungsverhaeltnisGesetzlich.html\">ISiKVersicherungsverhaeltnisGesetzlich</a></p></div><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/versicherungsart-de-basis GKV}\">gesetzliche Krankenversicherung</span></p><p><b>subscriber</b>: <a href=\"RelatedPerson-SZ1Mutter.html\">RelatedPerson Mama Musterfrau (official)</a></p><p><b>beneficiary</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>payor</b>: TKKG (Identifier: Organization identifier/260326822)</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/versicherungsart-de-basis"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/versicherungsart-de-basis>
+       ] ;
+       fhir:code [ fhir:v "GKV" ]
+     ] )
+  ] ; # 
+  fhir:subscriber [
+     fhir:l <http://gefyra.info/training/RelatedPerson/SZ1Mutter> ;
+     fhir:reference [ fhir:v "RelatedPerson/SZ1Mutter" ] ;
+     fhir:identifier [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://fhir.de/CodeSystem/identifier-type-de-basis"^^xsd:anyURI ;
+             fhir:l <http://fhir.de/CodeSystem/identifier-type-de-basis>
+           ] ;
+           fhir:code [ fhir:v "KVZ10" ]
+         ] )
+       ] ;
+       fhir:system [
+         fhir:v "http://fhir.de/sid/gkv/kvid-10"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/sid/gkv/kvid-10>
+       ] ;
+       fhir:value [ fhir:v "A987654321" ]
+     ]
+  ] ; # 
+  fhir:beneficiary [
+     fhir:l <http://gefyra.info/training/Patient/SZ1Patient> ;
+     fhir:reference [ fhir:v "Patient/SZ1Patient" ]
+  ] ; # 
+  fhir:payor ( [
+     fhir:identifier [
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+             fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+           ] ;
+           fhir:code [ fhir:v "XX" ]
+         ] )
+       ] ;
+       fhir:system [
+         fhir:v "http://fhir.de/sid/arge-ik/iknr"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/sid/arge-ik/iknr>
+       ] ;
+       fhir:value [ fhir:v "260326822" ]
+     ] ;
+     fhir:display [ fhir:v "TKKG" ]
+  ] ) . # 
+
+<https://example.com/fhir/Coverage/SZ1VersicherungSelbstzahler> a fhir:Coverage ;
+  fhir:id [ fhir:v "SZ1VersicherungSelbstzahler"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisSelbstzahler"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisSelbstzahler>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Coverage_SZ1VersicherungSelbstzahler\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Coverage SZ1VersicherungSelbstzahler</b></p><a name=\"SZ1VersicherungSelbstzahler\"> </a><a name=\"hcSZ1VersicherungSelbstzahler\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKVersicherungsverhaeltnisSelbstzahler.html\">ISiKVersicherungsverhaeltnisSelbstzahler</a></p></div><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/versicherungsart-de-basis SEL}\">Selbstzahler</span></p><p><b>beneficiary</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>payor</b>: <a href=\"RelatedPerson-SZ1Mutter.html\">RelatedPerson Mama Musterfrau (official)</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/versicherungsart-de-basis"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/versicherungsart-de-basis>
+       ] ;
+       fhir:code [ fhir:v "SEL" ]
+     ] )
+  ] ; # 
+  fhir:beneficiary [
+     fhir:l <http://gefyra.info/training/Patient/SZ1Patient> ;
+     fhir:reference [ fhir:v "Patient/SZ1Patient" ]
+  ] ; # 
+  fhir:payor ( [
+     fhir:l <http://gefyra.info/training/RelatedPerson/SZ1Mutter> ;
+     fhir:reference [ fhir:v "RelatedPerson/SZ1Mutter" ]
+  ] ) . # 
+
+<https://example.com/fhir/Encounter/SZ1Vorstationaer> a fhir:Encounter ;
+  fhir:id [ fhir:v "SZ1Vorstationaer"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ISiKKontaktGesundheitseinrichtung"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ISiKKontaktGesundheitseinrichtung>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_SZ1Vorstationaer\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter SZ1Vorstationaer</b></p><a name=\"SZ1Vorstationaer\"> </a><a name=\"hcSZ1Vorstationaer\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKKontaktGesundheitseinrichtung.html\">ISiKKontaktGesundheitseinrichtung</a></p></div><p><b>identifier</b>: Visit number/0123456789-1</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/Kontaktebene abteilungskontakt}\">Abteilungskontakt</span>, <span title=\"Codes:{http://fhir.de/CodeSystem/kontaktart-de vorstationaer}\">Vorstationär</span></p><p><b>subject</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>period</b>: 2024-10-01 --&gt; 2024-10-01</p><p><b>account</b>: <a href=\"Account-SZ1DRGFall.html\">Account: identifier = Account number; status = active; type = inpatient encounter</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "VN" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://beispiel-krankenhaus.de/sid/besuchsnummer"^^xsd:anyURI ;
+       fhir:l <http://beispiel-krankenhaus.de/sid/besuchsnummer>
+     ] ;
+     fhir:value [ fhir:v "0123456789-1" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+     ] ;
+     fhir:code [ fhir:v "AMB" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/Kontaktebene"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/Kontaktebene>
+       ] ;
+       fhir:code [ fhir:v "abteilungskontakt" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/kontaktart-de"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/kontaktart-de>
+       ] ;
+       fhir:code [ fhir:v "vorstationaer" ] ;
+       fhir:display [ fhir:v "Vorstationär" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <http://gefyra.info/training/Patient/SZ1Patient> ;
+     fhir:reference [ fhir:v "Patient/SZ1Patient" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2024-10-01"^^xsd:date ] ;
+     fhir:end [ fhir:v "2024-10-01"^^xsd:date ]
+  ] ; # 
+  fhir:account ( [
+     fhir:l <http://gefyra.info/training/Account/SZ1DRGFall> ;
+     fhir:reference [ fhir:v "Account/SZ1DRGFall" ] ;
+     fhir:identifier [
+       fhir:system [
+         fhir:v "http://beispiel-krankenhaus.de/sid/fallnummern"^^xsd:anyURI ;
+         fhir:l <http://beispiel-krankenhaus.de/sid/fallnummern>
+       ] ;
+       fhir:value [ fhir:v "0123456789" ]
+     ]
+  ] ) . # 
+
+<https://example.com/fhir/Encounter/SZ1Stationaer> a fhir:Encounter ;
+  fhir:id [ fhir:v "SZ1Stationaer"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ISiKKontaktGesundheitseinrichtung"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ISiKKontaktGesundheitseinrichtung>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_SZ1Stationaer\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter SZ1Stationaer</b></p><a name=\"SZ1Stationaer\"> </a><a name=\"hcSZ1Stationaer\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKKontaktGesundheitseinrichtung.html\">ISiKKontaktGesundheitseinrichtung</a></p></div><p><b>identifier</b>: Visit number/0123456789-2</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/Kontaktebene abteilungskontakt}\">Abteilungskontakt</span>, <span title=\"Codes:{http://fhir.de/CodeSystem/kontaktart-de normalstationaer}\">Normalstationär</span></p><p><b>subject</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>period</b>: 2024-10-07 --&gt; 2024-10-10</p><p><b>account</b>: <a href=\"Account-SZ1DRGFall.html\">Account: identifier = Account number; status = active; type = inpatient encounter</a></p><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td></tr><tr><td style=\"display: none\">*</td><td/></tr></table><blockquote><p><b>location</b></p><p><b>location</b>: Bettenstellplatz 123 (Identifier: <code>http://beispiel-krankenhaus.de/sid/betten</code>/123)</p><p><b>status</b>: Active</p><p><b>physicalType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type bd}\">Bed</span></p></blockquote><blockquote><p><b>location</b></p><p><b>location</b>: Zimmer 12 (Identifier: <code>http://beispiel-krankenhaus.de/sid/zimmer</code>/12)</p><p><b>status</b>: Active</p><p><b>physicalType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type ro}\">Room</span></p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "VN" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://beispiel-krankenhaus.de/sid/besuchsnummer"^^xsd:anyURI ;
+       fhir:l <http://beispiel-krankenhaus.de/sid/besuchsnummer>
+     ] ;
+     fhir:value [ fhir:v "0123456789-2" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+     ] ;
+     fhir:code [ fhir:v "IMP" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/Kontaktebene"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/Kontaktebene>
+       ] ;
+       fhir:code [ fhir:v "abteilungskontakt" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/kontaktart-de"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/kontaktart-de>
+       ] ;
+       fhir:code [ fhir:v "normalstationaer" ] ;
+       fhir:display [ fhir:v "Normalstationär" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <http://gefyra.info/training/Patient/SZ1Patient> ;
+     fhir:reference [ fhir:v "Patient/SZ1Patient" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2024-10-07"^^xsd:date ] ;
+     fhir:end [ fhir:v "2024-10-10"^^xsd:date ]
+  ] ; # 
+  fhir:account ( [
+     fhir:l <http://gefyra.info/training/Account/SZ1DRGFall> ;
+     fhir:reference [ fhir:v "Account/SZ1DRGFall" ] ;
+     fhir:identifier [
+       fhir:system [
+         fhir:v "http://beispiel-krankenhaus.de/sid/fallnummern"^^xsd:anyURI ;
+         fhir:l <http://beispiel-krankenhaus.de/sid/fallnummern>
+       ] ;
+       fhir:value [ fhir:v "0123456789" ]
+     ]
+  ] ) ; # 
+  fhir:hospitalization [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://fhir.de/StructureDefinition/Wahlleistung"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/StructureDefinition/Wahlleistung>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "http://fhir.de/CodeSystem/wahlleistungen-de"^^xsd:anyURI ;
+           fhir:l <http://fhir.de/CodeSystem/wahlleistungen-de>
+         ] ;
+         fhir:code [ fhir:v "unterkunft-und-verpflegung-begleitperson-kinder-ohne-med-begruedung" ] ;
+         fhir:display [ fhir:v "Unterkunft und Verpflegung einer Begleitperson ohne med. Begründung" ]
+       ]
+     ] )
+  ] ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:identifier [
+         fhir:system [
+           fhir:v "http://beispiel-krankenhaus.de/sid/betten"^^xsd:anyURI ;
+           fhir:l <http://beispiel-krankenhaus.de/sid/betten>
+         ] ;
+         fhir:value [ fhir:v "123" ]
+       ] ;
+       fhir:display [ fhir:v "Bettenstellplatz 123" ]
+     ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:physicalType [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/location-physical-type"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/location-physical-type>
+         ] ;
+         fhir:code [ fhir:v "bd" ] ;
+         fhir:display [ fhir:v "Bed" ]
+       ] )
+     ]
+  ] [
+     fhir:location [
+       fhir:identifier [
+         fhir:system [
+           fhir:v "http://beispiel-krankenhaus.de/sid/zimmer"^^xsd:anyURI ;
+           fhir:l <http://beispiel-krankenhaus.de/sid/zimmer>
+         ] ;
+         fhir:value [ fhir:v "12" ]
+       ] ;
+       fhir:display [ fhir:v "Zimmer 12" ]
+     ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:physicalType [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/location-physical-type"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/location-physical-type>
+         ] ;
+         fhir:code [ fhir:v "ro" ] ;
+         fhir:display [ fhir:v "Room" ]
+       ] )
+     ]
+  ] ) . # 
+
+<https://example.com/fhir/Encounter/SZ1Nachstationaer> a fhir:Encounter ;
+  fhir:id [ fhir:v "SZ1Nachstationaer"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ISiKKontaktGesundheitseinrichtung"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ISiKKontaktGesundheitseinrichtung>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_SZ1Nachstationaer\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter SZ1Nachstationaer</b></p><a name=\"SZ1Nachstationaer\"> </a><a name=\"hcSZ1Nachstationaer\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKKontaktGesundheitseinrichtung.html\">ISiKKontaktGesundheitseinrichtung</a></p></div><p><b>identifier</b>: Visit number/0123456789-3</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/Kontaktebene abteilungskontakt}\">Abteilungskontakt</span>, <span title=\"Codes:{http://fhir.de/CodeSystem/kontaktart-de nachstationaer}\">Nachstationär</span></p><p><b>subject</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>period</b>: 2024-10-14 --&gt; 2024-10-14</p><p><b>account</b>: <a href=\"Account-SZ1DRGFall.html\">Account: identifier = Account number; status = active; type = inpatient encounter</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "VN" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://beispiel-krankenhaus.de/sid/besuchsnummer"^^xsd:anyURI ;
+       fhir:l <http://beispiel-krankenhaus.de/sid/besuchsnummer>
+     ] ;
+     fhir:value [ fhir:v "0123456789-3" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+     ] ;
+     fhir:code [ fhir:v "AMB" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/Kontaktebene"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/Kontaktebene>
+       ] ;
+       fhir:code [ fhir:v "abteilungskontakt" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/kontaktart-de"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/kontaktart-de>
+       ] ;
+       fhir:code [ fhir:v "nachstationaer" ] ;
+       fhir:display [ fhir:v "Nachstationär" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <http://gefyra.info/training/Patient/SZ1Patient> ;
+     fhir:reference [ fhir:v "Patient/SZ1Patient" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2024-10-14"^^xsd:date ] ;
+     fhir:end [ fhir:v "2024-10-14"^^xsd:date ]
+  ] ; # 
+  fhir:account ( [
+     fhir:l <http://gefyra.info/training/Account/SZ1DRGFall> ;
+     fhir:reference [ fhir:v "Account/SZ1DRGFall" ] ;
+     fhir:identifier [
+       fhir:system [
+         fhir:v "http://beispiel-krankenhaus.de/sid/fallnummern"^^xsd:anyURI ;
+         fhir:l <http://beispiel-krankenhaus.de/sid/fallnummern>
+       ] ;
+       fhir:value [ fhir:v "0123456789" ]
+     ]
+  ] ) . # 
+
+<https://example.com/fhir/Account/SZ1DRGFall> a fhir:Account ;
+  fhir:id [ fhir:v "SZ1DRGFall"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ISiKAbrechnungsfall"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ISiKAbrechnungsfall>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Account_SZ1DRGFall\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Account SZ1DRGFall</b></p><a name=\"SZ1DRGFall\"> </a><a name=\"hcSZ1DRGFall\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKAbrechnungsfall.html\">ISiKAbrechnungsfall</a></p></div><p><b>identifier</b>: Account number/0123456789</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode IMP}\">inpatient encounter</span></p><p><b>subject</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><blockquote><p><b>coverage</b></p><p><b>Abrechnungsart</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/dkgev/Abrechnungsart#Abrechnungsart-DRG\">Abrechnungsart: DRG</a> (Diagnosebezogene Fallgruppen)</p><p><b>coverage</b>: <a href=\"Coverage-SZ1VersicherungGesetzlich.html\">Coverage: status = active; type = gesetzliche Krankenversicherung</a></p></blockquote><blockquote><p><b>coverage</b></p><p><b>Abrechnungsart</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/dkgev/Abrechnungsart#Abrechnungsart-SZ\">Abrechnungsart: SZ</a> (Selbstzahlerrechnung)</p><p><b>coverage</b>: <a href=\"Coverage-SZ1VersicherungSelbstzahler.html\">Coverage: status = active; type = Selbstzahler</a></p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "AN" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://beispiel-krankenhaus.de/sid/fallnummern"^^xsd:anyURI ;
+       fhir:l <http://beispiel-krankenhaus.de/sid/fallnummern>
+     ] ;
+     fhir:value [ fhir:v "0123456789" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+       ] ;
+       fhir:code [ fhir:v "IMP" ]
+     ] )
+  ] ; # 
+  fhir:subject ( [
+     fhir:l <http://gefyra.info/training/Patient/SZ1Patient> ;
+     fhir:reference [ fhir:v "Patient/SZ1Patient" ]
+  ] ) ; # 
+  fhir:coverage ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://fhir.de/StructureDefinition/ExtensionAbrechnungsart"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/StructureDefinition/ExtensionAbrechnungsart>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "http://fhir.de/CodeSystem/dkgev/Abrechnungsart"^^xsd:anyURI ;
+           fhir:l <http://fhir.de/CodeSystem/dkgev/Abrechnungsart>
+         ] ;
+         fhir:code [ fhir:v "DRG" ] ;
+         fhir:display [ fhir:v "Diagnosebezogene Fallgruppen" ]
+       ]
+     ] ) ;
+     fhir:coverage [
+       fhir:l <http://gefyra.info/training/Coverage/SZ1VersicherungGesetzlich> ;
+       fhir:reference [ fhir:v "Coverage/SZ1VersicherungGesetzlich" ]
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://fhir.de/StructureDefinition/ExtensionAbrechnungsart"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/StructureDefinition/ExtensionAbrechnungsart>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "http://fhir.de/CodeSystem/dkgev/Abrechnungsart"^^xsd:anyURI ;
+           fhir:l <http://fhir.de/CodeSystem/dkgev/Abrechnungsart>
+         ] ;
+         fhir:code [ fhir:v "SZ" ] ;
+         fhir:display [ fhir:v "Selbstzahlerrechnung" ]
+       ]
+     ] ) ;
+     fhir:coverage [
+       fhir:l <http://gefyra.info/training/Coverage/SZ1VersicherungSelbstzahler> ;
+       fhir:reference [ fhir:v "Coverage/SZ1VersicherungSelbstzahler" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

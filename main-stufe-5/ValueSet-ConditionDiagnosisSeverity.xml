@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ConditionDiagnosisSeverity"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet ConditionDiagnosisSeverity</b></p><a name="ConditionDiagnosisSeverity"> </a><a name="hcConditionDiagnosisSeverity"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicity stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where concept  is-a 24484000 (Severe)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicity stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where concept  is-a 6736007 (Midgrade)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicity stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where concept  is-a 255604002 (Mild)</li></ul></div>
+  </text>
+  <url value="http://gefyra.info/training/ValueSet/ConditionDiagnosisSeverity"/>
+  <version value="0.1.0"/>
+  <name value="ConditionDiagnosisSeverity"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-10-23"/>
+  <publisher value="Gefyra GmbH"/>
+  <contact>
+    <name value="Gefyra GmbH"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://gefyra.info/"/>
+    </telecom>
+  </contact>
+  <description value="Enthaelt alle SNOMED DiagnosisSeverity Codes"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="24484000"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="6736007"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="255604002"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

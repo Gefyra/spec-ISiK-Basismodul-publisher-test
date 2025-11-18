@@ -1,0 +1,48 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "FachabteilungskontaktMinimal",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter FachabteilungskontaktMinimal</b></p><a name=\"FachabteilungskontaktMinimal\"> </a><a name=\"hcFachabteilungskontaktMinimal\"> </a><p><b>identifier</b>: Visit number/0123456789</p><p><b>status</b>: Unknown</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/kontaktart-de operation}\">Operation</span>, <span title=\"Codes:{http://fhir.de/CodeSystem/Kontaktebene abteilungskontakt}\">Abteilungskontakt</span></p><p><b>serviceType</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel 0100}\">Innere Medizin</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMusterfrau.html\">Erika Fürstin von Musterfrau (official) Female, DoB: 1964-08-12 ( Private Krankenversicherung\u00a0(use:\u00a0secondary,\u00a0))</a></p><p><b>period</b>: 2022-05-03 --&gt; 2022-05-05</p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "VN"
+      }]
+    },
+    "system" : "https://test.krankenhaus.de/fhir/sid/besuchsnummer",
+    "value" : "0123456789"
+  }],
+  "status" : "unknown",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "IMP"
+  },
+  "type" : [{
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/kontaktart-de",
+      "code" : "operation"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/Kontaktebene",
+      "code" : "abteilungskontakt"
+    }]
+  }],
+  "serviceType" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel",
+      "code" : "0100"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMusterfrau"
+  },
+  "period" : {
+    "start" : "2022-05-03",
+    "end" : "2022-05-05"
+  }
+}

@@ -1,0 +1,71 @@
+# ISiKSubscriptionStatusExample - v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **ISiKSubscriptionStatusExample**
+
+## Example Parameters: ISiKSubscriptionStatusExample
+
+Profile: [ISiK Subscription Status](StructureDefinition-ISiKSubscriptionStatus.md)
+
+## Parameters
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Parameters",
+  "id" : "ISiKSubscriptionStatusExample",
+  "meta" : {
+    "profile" : [
+      "http://gefyra.info/training/StructureDefinition/ISiKSubscriptionStatus"
+    ]
+  },
+  "parameter" : [
+    {
+      "name" : "subscription",
+      "valueReference" : {
+        "reference" : "Subscription/1"
+      }
+    },
+    {
+      "name" : "topic",
+      "valueCanonical" : "https://gematik.de/fhir/isik/SubscriptionTopic/patient-merge"
+    },
+    {
+      "name" : "status",
+      "valueCode" : "active"
+    },
+    {
+      "name" : "type",
+      "valueCode" : "event-notification"
+    },
+    {
+      "name" : "events-since-subscription-start",
+      "valueString" : "1"
+    },
+    {
+      "name" : "notification-event",
+      "part" : [
+        {
+          "name" : "event-number",
+          "valueString" : "1"
+        },
+        {
+          "name" : "timestamp",
+          "valueInstant" : "2024-02-22T18:30:05+01:00"
+        },
+        {
+          "name" : "focus",
+          "valueReference" : {
+            "reference" : "Patient/DorisQuelle"
+          }
+        }
+      ]
+    }
+  ]
+}
+
+```

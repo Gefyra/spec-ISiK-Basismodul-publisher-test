@@ -1,0 +1,669 @@
+# Szenario1 - v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Szenario1**
+
+## Example Bundle: Szenario1
+
+Bundle Szenario1 of type collection
+
+-------
+
+Entry 1 - fullUrl = https://example.com/fhir/Patient/SZ1Patient
+
+Resource Patient:
+
+> 
+
+Profile: [ISiKPatient](StructureDefinition-ISiKPatient.md)
+
+Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)
+-------
+
+-------
+
+Entry 2 - fullUrl = https://example.com/fhir/RelatedPerson/SZ1Mutter
+
+Resource RelatedPerson:
+
+> 
+
+Profile: [ISiKAngehoeriger](StructureDefinition-ISiKAngehoeriger.md)
+
+**identifier**: Krankenversichertennummer/A987654321**patient**:[Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)](Patient-SZ1Patient.md)**relationship**:mother**name**: Mama Musterfrau (Official)**address**: Milchstr. 42 Beispielstadt 78143 DE
+
+-------
+
+Entry 3 - fullUrl = https://example.com/fhir/Coverage/SZ1VersicherungGesetzlich
+
+Resource Coverage:
+
+> 
+
+Profile: [ISiKVersicherungsverhaeltnisGesetzlich](StructureDefinition-ISiKVersicherungsverhaeltnisGesetzlich.md)
+
+**status**: Active**type**:gesetzliche Krankenversicherung**subscriber**:[RelatedPerson Mama Musterfrau (official)](RelatedPerson-SZ1Mutter.md)**beneficiary**:[Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)](Patient-SZ1Patient.md)
+
+-------
+
+Entry 4 - fullUrl = https://example.com/fhir/Coverage/SZ1VersicherungSelbstzahler
+
+Resource Coverage:
+
+> 
+
+Profile: [ISiKVersicherungsverhaeltnisSelbstzahler](StructureDefinition-ISiKVersicherungsverhaeltnisSelbstzahler.md)
+
+**status**: Active**type**:Selbstzahler**beneficiary**:[Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)](Patient-SZ1Patient.md)
+
+-------
+
+Entry 5 - fullUrl = https://example.com/fhir/Encounter/SZ1Vorstationaer
+
+Resource Encounter:
+
+> 
+
+Profile: [ISiKKontaktGesundheitseinrichtung](StructureDefinition-ISiKKontaktGesundheitseinrichtung.md)
+
+**identifier**: Visit number/0123456789-1**status**: completed**class**:ambulatory**type**:Abteilungskontakt,Vorstationär**subject**:[Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)](Patient-SZ1Patient.md)**account**:[Account: identifier = Account number; status = active; type = inpatient encounter](Account-SZ1DRGFall.md)
+
+-------
+
+Entry 6 - fullUrl = https://example.com/fhir/Encounter/SZ1Stationaer
+
+Resource Encounter:
+
+> 
+
+Profile: [ISiKKontaktGesundheitseinrichtung](StructureDefinition-ISiKKontaktGesundheitseinrichtung.md)
+
+**identifier**: Visit number/0123456789-2**status**: completed**class**:inpatient encounter**type**:Abteilungskontakt,Normalstationär**subject**:[Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)](Patient-SZ1Patient.md)**account**:[Account: identifier = Account number; status = active; type = inpatient encounter](Account-SZ1DRGFall.md)
+> **location****location**: Bettenstellplatz 123 (Identifier:`http://beispiel-krankenhaus.de/sid/betten`/123)**status**: Active
+
+> **location****location**: Zimmer 12 (Identifier:`http://beispiel-krankenhaus.de/sid/zimmer`/12)**status**: Active
+
+-------
+
+Entry 7 - fullUrl = https://example.com/fhir/Encounter/SZ1Nachstationaer
+
+Resource Encounter:
+
+> 
+
+Profile: [ISiKKontaktGesundheitseinrichtung](StructureDefinition-ISiKKontaktGesundheitseinrichtung.md)
+
+**identifier**: Visit number/0123456789-3**status**: completed**class**:ambulatory**type**:Abteilungskontakt,Nachstationär**subject**:[Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)](Patient-SZ1Patient.md)**account**:[Account: identifier = Account number; status = active; type = inpatient encounter](Account-SZ1DRGFall.md)
+
+-------
+
+Entry 8 - fullUrl = https://example.com/fhir/Account/SZ1DRGFall
+
+Resource Account:
+
+> 
+
+Profile: [ISiKAbrechnungsfall](StructureDefinition-ISiKAbrechnungsfall.md)
+
+**identifier**: Account number/0123456789**status**: Active**type**:inpatient encounter**subject**:[Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)](Patient-SZ1Patient.md)
+> **coverage****Abrechnungsart**:[Abrechnungsart: DRG](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/CodeSystem/dkgev/Abrechnungsart#Abrechnungsart-DRG)(Diagnosebezogene Fallgruppen)**coverage**:[Coverage: status = active; type = gesetzliche Krankenversicherung](Coverage-SZ1VersicherungGesetzlich.md)
+
+> **coverage****Abrechnungsart**:[Abrechnungsart: SZ](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/CodeSystem/dkgev/Abrechnungsart#Abrechnungsart-SZ)(Selbstzahlerrechnung)**coverage**:[Coverage: status = active; type = Selbstzahler](Coverage-SZ1VersicherungSelbstzahler.md)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "Szenario1",
+  "type" : "collection",
+  "entry" : [
+    {
+      "fullUrl" : "https://example.com/fhir/Patient/SZ1Patient",
+      "resource" : {
+        "resourceType" : "Patient",
+        "id" : "SZ1Patient",
+        "meta" : {
+          "profile" : [
+            "http://gefyra.info/training/StructureDefinition/ISiKPatient"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_SZ1Patient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient SZ1Patient</b></p><a name=\"SZ1Patient\"> </a><a name=\"hcSZ1Patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKPatient.html\">ISiKPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\">Medical record number/12345</td></tr></table></div>"
+        },
+        "identifier" : [
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://fhir.de/CodeSystem/identifier-type-de-basis",
+                  "code" : "KVZ10"
+                }
+              ]
+            },
+            "system" : "http://fhir.de/sid/gkv/kvid-10",
+            "value" : "A123456789"
+          },
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "MR"
+                }
+              ]
+            },
+            "system" : "http://beispiel-krankenhaus.de/sid/Patienten",
+            "value" : "12345"
+          }
+        ],
+        "active" : true,
+        "name" : [
+          {
+            "use" : "official",
+            "family" : "Musterfrau",
+            "given" : ["Töchterchen"]
+          }
+        ],
+        "gender" : "female",
+        "birthDate" : "2010-01-01"
+      }
+    },
+    {
+      "fullUrl" : "https://example.com/fhir/RelatedPerson/SZ1Mutter",
+      "resource" : {
+        "resourceType" : "RelatedPerson",
+        "id" : "SZ1Mutter",
+        "meta" : {
+          "profile" : [
+            "http://gefyra.info/training/StructureDefinition/ISiKAngehoeriger"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RelatedPerson_SZ1Mutter\"> </a><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson SZ1Mutter</b></p><a name=\"SZ1Mutter\"> </a><a name=\"hcSZ1Mutter\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKAngehoeriger.html\">ISiKAngehoeriger</a></p></div><p><b>identifier</b>: Krankenversichertennummer/A987654321</p><p><b>patient</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\">mother</span></p><p><b>name</b>: Mama Musterfrau (Official)</p><p><b>address</b>: Milchstr. 42 Beispielstadt 78143 DE </p></div>"
+        },
+        "identifier" : [
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://fhir.de/CodeSystem/identifier-type-de-basis",
+                  "code" : "KVZ10"
+                }
+              ]
+            },
+            "system" : "http://fhir.de/sid/gkv/kvid-10",
+            "value" : "A987654321"
+          }
+        ],
+        "patient" : {
+          "reference" : "Patient/SZ1Patient"
+        },
+        "relationship" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code" : "MTH"
+              }
+            ]
+          }
+        ],
+        "name" : [
+          {
+            "use" : "official",
+            "family" : "Musterfrau",
+            "given" : ["Mama"]
+          }
+        ],
+        "address" : [
+          {
+            "type" : "both",
+            "line" : ["Milchstr. 42"],
+            "city" : "Beispielstadt",
+            "postalCode" : "78143",
+            "country" : "DE"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "https://example.com/fhir/Coverage/SZ1VersicherungGesetzlich",
+      "resource" : {
+        "resourceType" : "Coverage",
+        "id" : "SZ1VersicherungGesetzlich",
+        "meta" : {
+          "profile" : [
+            "http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisGesetzlich"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Coverage_SZ1VersicherungGesetzlich\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Coverage SZ1VersicherungGesetzlich</b></p><a name=\"SZ1VersicherungGesetzlich\"> </a><a name=\"hcSZ1VersicherungGesetzlich\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKVersicherungsverhaeltnisGesetzlich.html\">ISiKVersicherungsverhaeltnisGesetzlich</a></p></div><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/versicherungsart-de-basis GKV}\">gesetzliche Krankenversicherung</span></p><p><b>subscriber</b>: <a href=\"RelatedPerson-SZ1Mutter.html\">RelatedPerson Mama Musterfrau (official)</a></p><p><b>beneficiary</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>payor</b>: TKKG (Identifier: Organization identifier/260326822)</p></div>"
+        },
+        "status" : "active",
+        "type" : {
+          "coding" : [
+            {
+              "system" : "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+              "code" : "GKV"
+            }
+          ]
+        },
+        "subscriber" : {
+          "reference" : "RelatedPerson/SZ1Mutter",
+          "identifier" : {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://fhir.de/CodeSystem/identifier-type-de-basis",
+                  "code" : "KVZ10"
+                }
+              ]
+            },
+            "system" : "http://fhir.de/sid/gkv/kvid-10",
+            "value" : "A987654321"
+          }
+        },
+        "beneficiary" : {
+          "reference" : "Patient/SZ1Patient"
+        },
+        "payor" : [
+          {
+            "identifier" : {
+              "type" : {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                    "code" : "XX"
+                  }
+                ]
+              },
+              "system" : "http://fhir.de/sid/arge-ik/iknr",
+              "value" : "260326822"
+            },
+            "display" : "TKKG"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "https://example.com/fhir/Coverage/SZ1VersicherungSelbstzahler",
+      "resource" : {
+        "resourceType" : "Coverage",
+        "id" : "SZ1VersicherungSelbstzahler",
+        "meta" : {
+          "profile" : [
+            "http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisSelbstzahler"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Coverage_SZ1VersicherungSelbstzahler\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Coverage SZ1VersicherungSelbstzahler</b></p><a name=\"SZ1VersicherungSelbstzahler\"> </a><a name=\"hcSZ1VersicherungSelbstzahler\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKVersicherungsverhaeltnisSelbstzahler.html\">ISiKVersicherungsverhaeltnisSelbstzahler</a></p></div><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/versicherungsart-de-basis SEL}\">Selbstzahler</span></p><p><b>beneficiary</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>payor</b>: <a href=\"RelatedPerson-SZ1Mutter.html\">RelatedPerson Mama Musterfrau (official)</a></p></div>"
+        },
+        "status" : "active",
+        "type" : {
+          "coding" : [
+            {
+              "system" : "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+              "code" : "SEL"
+            }
+          ]
+        },
+        "beneficiary" : {
+          "reference" : "Patient/SZ1Patient"
+        },
+        "payor" : [
+          {
+            "reference" : "RelatedPerson/SZ1Mutter"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "https://example.com/fhir/Encounter/SZ1Vorstationaer",
+      "resource" : {
+        "resourceType" : "Encounter",
+        "id" : "SZ1Vorstationaer",
+        "meta" : {
+          "profile" : [
+            "http://gefyra.info/training/StructureDefinition/ISiKKontaktGesundheitseinrichtung"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_SZ1Vorstationaer\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter SZ1Vorstationaer</b></p><a name=\"SZ1Vorstationaer\"> </a><a name=\"hcSZ1Vorstationaer\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKKontaktGesundheitseinrichtung.html\">ISiKKontaktGesundheitseinrichtung</a></p></div><p><b>identifier</b>: Visit number/0123456789-1</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/Kontaktebene abteilungskontakt}\">Abteilungskontakt</span>, <span title=\"Codes:{http://fhir.de/CodeSystem/kontaktart-de vorstationaer}\">Vorstationär</span></p><p><b>subject</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>period</b>: 2024-10-01 --&gt; 2024-10-01</p><p><b>account</b>: <a href=\"Account-SZ1DRGFall.html\">Account: identifier = Account number; status = active; type = inpatient encounter</a></p></div>"
+        },
+        "identifier" : [
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "VN"
+                }
+              ]
+            },
+            "system" : "http://beispiel-krankenhaus.de/sid/besuchsnummer",
+            "value" : "0123456789-1"
+          }
+        ],
+        "status" : "finished",
+        "class" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "AMB"
+        },
+        "type" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://fhir.de/CodeSystem/Kontaktebene",
+                "code" : "abteilungskontakt"
+              }
+            ]
+          },
+          {
+            "coding" : [
+              {
+                "system" : "http://fhir.de/CodeSystem/kontaktart-de",
+                "code" : "vorstationaer",
+                "display" : "Vorstationär"
+              }
+            ]
+          }
+        ],
+        "subject" : {
+          "reference" : "Patient/SZ1Patient"
+        },
+        "period" : {
+          "start" : "2024-10-01",
+          "end" : "2024-10-01"
+        },
+        "account" : [
+          {
+            "reference" : "Account/SZ1DRGFall",
+            "identifier" : {
+              "system" : "http://beispiel-krankenhaus.de/sid/fallnummern",
+              "value" : "0123456789"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "https://example.com/fhir/Encounter/SZ1Stationaer",
+      "resource" : {
+        "resourceType" : "Encounter",
+        "id" : "SZ1Stationaer",
+        "meta" : {
+          "profile" : [
+            "http://gefyra.info/training/StructureDefinition/ISiKKontaktGesundheitseinrichtung"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_SZ1Stationaer\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter SZ1Stationaer</b></p><a name=\"SZ1Stationaer\"> </a><a name=\"hcSZ1Stationaer\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKKontaktGesundheitseinrichtung.html\">ISiKKontaktGesundheitseinrichtung</a></p></div><p><b>identifier</b>: Visit number/0123456789-2</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/Kontaktebene abteilungskontakt}\">Abteilungskontakt</span>, <span title=\"Codes:{http://fhir.de/CodeSystem/kontaktart-de normalstationaer}\">Normalstationär</span></p><p><b>subject</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>period</b>: 2024-10-07 --&gt; 2024-10-10</p><p><b>account</b>: <a href=\"Account-SZ1DRGFall.html\">Account: identifier = Account number; status = active; type = inpatient encounter</a></p><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td></tr><tr><td style=\"display: none\">*</td><td/></tr></table><blockquote><p><b>location</b></p><p><b>location</b>: Bettenstellplatz 123 (Identifier: <code>http://beispiel-krankenhaus.de/sid/betten</code>/123)</p><p><b>status</b>: Active</p><p><b>physicalType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type bd}\">Bed</span></p></blockquote><blockquote><p><b>location</b></p><p><b>location</b>: Zimmer 12 (Identifier: <code>http://beispiel-krankenhaus.de/sid/zimmer</code>/12)</p><p><b>status</b>: Active</p><p><b>physicalType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type ro}\">Room</span></p></blockquote></div>"
+        },
+        "identifier" : [
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "VN"
+                }
+              ]
+            },
+            "system" : "http://beispiel-krankenhaus.de/sid/besuchsnummer",
+            "value" : "0123456789-2"
+          }
+        ],
+        "status" : "finished",
+        "class" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "IMP"
+        },
+        "type" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://fhir.de/CodeSystem/Kontaktebene",
+                "code" : "abteilungskontakt"
+              }
+            ]
+          },
+          {
+            "coding" : [
+              {
+                "system" : "http://fhir.de/CodeSystem/kontaktart-de",
+                "code" : "normalstationaer",
+                "display" : "Normalstationär"
+              }
+            ]
+          }
+        ],
+        "subject" : {
+          "reference" : "Patient/SZ1Patient"
+        },
+        "period" : {
+          "start" : "2024-10-07",
+          "end" : "2024-10-10"
+        },
+        "account" : [
+          {
+            "reference" : "Account/SZ1DRGFall",
+            "identifier" : {
+              "system" : "http://beispiel-krankenhaus.de/sid/fallnummern",
+              "value" : "0123456789"
+            }
+          }
+        ],
+        "hospitalization" : {
+          "extension" : [
+            {
+              "url" : "http://fhir.de/StructureDefinition/Wahlleistung",
+              "valueCoding" : {
+                "system" : "http://fhir.de/CodeSystem/wahlleistungen-de",
+                "code" : "unterkunft-und-verpflegung-begleitperson-kinder-ohne-med-begruedung",
+                "display" : "Unterkunft und Verpflegung einer Begleitperson ohne med. Begründung"
+              }
+            }
+          ]
+        },
+        "location" : [
+          {
+            "location" : {
+              "identifier" : {
+                "system" : "http://beispiel-krankenhaus.de/sid/betten",
+                "value" : "123"
+              },
+              "display" : "Bettenstellplatz 123"
+            },
+            "status" : "active",
+            "physicalType" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                  "code" : "bd",
+                  "display" : "Bed"
+                }
+              ]
+            }
+          },
+          {
+            "location" : {
+              "identifier" : {
+                "system" : "http://beispiel-krankenhaus.de/sid/zimmer",
+                "value" : "12"
+              },
+              "display" : "Zimmer 12"
+            },
+            "status" : "active",
+            "physicalType" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                  "code" : "ro",
+                  "display" : "Room"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "https://example.com/fhir/Encounter/SZ1Nachstationaer",
+      "resource" : {
+        "resourceType" : "Encounter",
+        "id" : "SZ1Nachstationaer",
+        "meta" : {
+          "profile" : [
+            "http://gefyra.info/training/StructureDefinition/ISiKKontaktGesundheitseinrichtung"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_SZ1Nachstationaer\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter SZ1Nachstationaer</b></p><a name=\"SZ1Nachstationaer\"> </a><a name=\"hcSZ1Nachstationaer\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKKontaktGesundheitseinrichtung.html\">ISiKKontaktGesundheitseinrichtung</a></p></div><p><b>identifier</b>: Visit number/0123456789-3</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/Kontaktebene abteilungskontakt}\">Abteilungskontakt</span>, <span title=\"Codes:{http://fhir.de/CodeSystem/kontaktart-de nachstationaer}\">Nachstationär</span></p><p><b>subject</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><p><b>period</b>: 2024-10-14 --&gt; 2024-10-14</p><p><b>account</b>: <a href=\"Account-SZ1DRGFall.html\">Account: identifier = Account number; status = active; type = inpatient encounter</a></p></div>"
+        },
+        "identifier" : [
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "VN"
+                }
+              ]
+            },
+            "system" : "http://beispiel-krankenhaus.de/sid/besuchsnummer",
+            "value" : "0123456789-3"
+          }
+        ],
+        "status" : "finished",
+        "class" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "AMB"
+        },
+        "type" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://fhir.de/CodeSystem/Kontaktebene",
+                "code" : "abteilungskontakt"
+              }
+            ]
+          },
+          {
+            "coding" : [
+              {
+                "system" : "http://fhir.de/CodeSystem/kontaktart-de",
+                "code" : "nachstationaer",
+                "display" : "Nachstationär"
+              }
+            ]
+          }
+        ],
+        "subject" : {
+          "reference" : "Patient/SZ1Patient"
+        },
+        "period" : {
+          "start" : "2024-10-14",
+          "end" : "2024-10-14"
+        },
+        "account" : [
+          {
+            "reference" : "Account/SZ1DRGFall",
+            "identifier" : {
+              "system" : "http://beispiel-krankenhaus.de/sid/fallnummern",
+              "value" : "0123456789"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "https://example.com/fhir/Account/SZ1DRGFall",
+      "resource" : {
+        "resourceType" : "Account",
+        "id" : "SZ1DRGFall",
+        "meta" : {
+          "profile" : [
+            "http://gefyra.info/training/StructureDefinition/ISiKAbrechnungsfall"
+          ]
+        },
+        "text" : {
+          "status" : "extensions",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Account_SZ1DRGFall\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Account SZ1DRGFall</b></p><a name=\"SZ1DRGFall\"> </a><a name=\"hcSZ1DRGFall\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKAbrechnungsfall.html\">ISiKAbrechnungsfall</a></p></div><p><b>identifier</b>: Account number/0123456789</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode IMP}\">inpatient encounter</span></p><p><b>subject</b>: <a href=\"Patient-SZ1Patient.html\">Töchterchen Musterfrau (official) Female, DoB: 2010-01-01 ( Krankenversichertennummer)</a></p><blockquote><p><b>coverage</b></p><p><b>Abrechnungsart</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/dkgev/Abrechnungsart#Abrechnungsart-DRG\">Abrechnungsart: DRG</a> (Diagnosebezogene Fallgruppen)</p><p><b>coverage</b>: <a href=\"Coverage-SZ1VersicherungGesetzlich.html\">Coverage: status = active; type = gesetzliche Krankenversicherung</a></p></blockquote><blockquote><p><b>coverage</b></p><p><b>Abrechnungsart</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.de/CodeSystem/dkgev/Abrechnungsart#Abrechnungsart-SZ\">Abrechnungsart: SZ</a> (Selbstzahlerrechnung)</p><p><b>coverage</b>: <a href=\"Coverage-SZ1VersicherungSelbstzahler.html\">Coverage: status = active; type = Selbstzahler</a></p></blockquote></div>"
+        },
+        "identifier" : [
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "AN"
+                }
+              ]
+            },
+            "system" : "http://beispiel-krankenhaus.de/sid/fallnummern",
+            "value" : "0123456789"
+          }
+        ],
+        "status" : "active",
+        "type" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code" : "IMP"
+            }
+          ]
+        },
+        "subject" : [
+          {
+            "reference" : "Patient/SZ1Patient"
+          }
+        ],
+        "coverage" : [
+          {
+            "extension" : [
+              {
+                "url" : "http://fhir.de/StructureDefinition/ExtensionAbrechnungsart",
+                "valueCoding" : {
+                  "system" : "http://fhir.de/CodeSystem/dkgev/Abrechnungsart",
+                  "code" : "DRG",
+                  "display" : "Diagnosebezogene Fallgruppen"
+                }
+              }
+            ],
+            "coverage" : {
+              "reference" : "Coverage/SZ1VersicherungGesetzlich"
+            }
+          },
+          {
+            "extension" : [
+              {
+                "url" : "http://fhir.de/StructureDefinition/ExtensionAbrechnungsart",
+                "valueCoding" : {
+                  "system" : "http://fhir.de/CodeSystem/dkgev/Abrechnungsart",
+                  "code" : "SZ",
+                  "display" : "Selbstzahlerrechnung"
+                }
+              }
+            ],
+            "coverage" : {
+              "reference" : "Coverage/SZ1VersicherungSelbstzahler"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+
+```

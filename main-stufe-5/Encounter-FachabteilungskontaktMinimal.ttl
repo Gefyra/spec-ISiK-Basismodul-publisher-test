@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://gefyra.info/training/Encounter/FachabteilungskontaktMinimal> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "FachabteilungskontaktMinimal"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter FachabteilungskontaktMinimal</b></p><a name=\"FachabteilungskontaktMinimal\"> </a><a name=\"hcFachabteilungskontaktMinimal\"> </a><p><b>identifier</b>: Visit number/0123456789</p><p><b>status</b>: Unknown</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>type</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/kontaktart-de operation}\">Operation</span>, <span title=\"Codes:{http://fhir.de/CodeSystem/Kontaktebene abteilungskontakt}\">Abteilungskontakt</span></p><p><b>serviceType</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel 0100}\">Innere Medizin</span></p><p><b>subject</b>: <a href=\"Patient-PatientinMusterfrau.html\">Erika Fürstin von Musterfrau (official) Female, DoB: 1964-08-12 ( Private Krankenversicherung (use: secondary, ))</a></p><p><b>period</b>: 2022-05-03 --&gt; 2022-05-05</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "VN" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "https://test.krankenhaus.de/fhir/sid/besuchsnummer"^^xsd:anyURI ;
+       fhir:l <https://test.krankenhaus.de/fhir/sid/besuchsnummer>
+     ] ;
+     fhir:value [ fhir:v "0123456789" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:class [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+     ] ;
+     fhir:code [ fhir:v "IMP" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/kontaktart-de"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/kontaktart-de>
+       ] ;
+       fhir:code [ fhir:v "operation" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/Kontaktebene"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/Kontaktebene>
+       ] ;
+       fhir:code [ fhir:v "abteilungskontakt" ]
+     ] )
+  ] ) ; # 
+  fhir:serviceType [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel>
+       ] ;
+       fhir:code [ fhir:v "0100" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://gefyra.info/training/Patient/PatientinMusterfrau> ;
+     fhir:reference [ fhir:v "Patient/PatientinMusterfrau" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-05-03"^^xsd:date ] ;
+     fhir:end [ fhir:v "2022-05-05"^^xsd:date ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

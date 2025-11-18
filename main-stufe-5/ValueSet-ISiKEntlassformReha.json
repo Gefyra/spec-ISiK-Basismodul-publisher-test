@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ISiKEntlassformReha",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ISiKEntlassformReha</b></p><a name=\"ISiKEntlassformReha\"> </a><a name=\"hcISiKEntlassformReha\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-ISiKEntlassformRehaCS.html\"><code>http://gefyra.info/training/CodeSystem/ISiKEntlassformRehaCS</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "http://gefyra.info/training/ValueSet/ISiKEntlassformReha",
+  "version" : "0.1.0",
+  "name" : "ISiKEntlassformRehaVS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-10-23",
+  "publisher" : "Gefyra GmbH",
+  "contact" : [{
+    "name" : "Gefyra GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://gefyra.info/"
+    }]
+  }],
+  "description" : "ISiK Entlassform Reha. Beschreibt Form und ggf. Weiterbehandlung der Entlassung eines Versicherten/Berechtigten aus verwaltungs- und medizinischer Sicht. Vgl. Schlüsseltabelle 2.107 Entlassungsform.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://gefyra.info/training/CodeSystem/ISiKEntlassformRehaCS"
+    }]
+  }
+}

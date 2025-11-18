@@ -1,0 +1,71 @@
+# Koerpergroesse-Percentil - v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Koerpergroesse-Percentil**
+
+## Example Observation: Koerpergroesse-Percentil
+
+Profile: [SD MII ICU Koerpergroesse Percentil](StructureDefinition-sd-mii-icu-koerpergroesse-percentil-altersabhaengig.md)
+
+**status**: Final
+
+**category**: Vital Signs
+
+**code**: Body height for age percentile
+
+**subject**: [Erika Fürstin von Musterfrau (official) Female, DoB: 1964-08-12 ( Private Krankenversicherung (use: secondary, ))](Patient-PatientinMusterfrau.md)
+
+**effective**: 2019-12-23 09:30:10+0100 --> 2019-12-23 10:30:10+0100
+
+**value**: 50 percent(Details: UCUM code% = '%')
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Observation",
+  "id" : "Koerpergroesse-Percentil",
+  "meta" : {
+    "profile" : [
+      "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpergroesse-percentil-altersabhaengig"
+    ]
+  },
+  "status" : "final",
+  "category" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "vital-signs"
+        }
+      ]
+    }
+  ],
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "1153605006",
+        "display" : "Body height for age percentile"
+      }
+    ]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientinMusterfrau"
+  },
+  "effectivePeriod" : {
+    "start" : "2019-12-23T09:30:10+01:00",
+    "end" : "2019-12-23T10:30:10+01:00"
+  },
+  "valueQuantity" : {
+    "value" : 50,
+    "unit" : "percent",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "%"
+  }
+}
+
+```

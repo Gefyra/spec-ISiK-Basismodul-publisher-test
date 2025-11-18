@@ -1,0 +1,96 @@
+# ISiKASKCoding - v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **ISiKASKCoding**
+
+## Data Type Profile: ISiKASKCoding 
+
+| | |
+| :--- | :--- |
+| *Official URL*:http://gefyra.info/training/StructureDefinition/ISiKASKCoding | *Version*:0.1.0 |
+| Active as of 2025-10-23 | *Computable Name*:ISiKASKCoding |
+
+ 
+Data Type profile for ASK Codings in ISiK 
+
+**Usages:**
+
+* Use this DataType Profile: [ISiKMedikament](StructureDefinition-ISiKMedikament.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/info.gefyra.training|current/StructureDefinition/ISiKASKCoding)
+
+### Formal Views of Profile Content
+
+ [Description of Profiles, Differentials, Snapshots and how the different presentations work](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](StructureDefinition-ISiKASKCoding.csv), [Excel](StructureDefinition-ISiKASKCoding.xlsx), [Schematron](StructureDefinition-ISiKASKCoding.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "ISiKASKCoding",
+  "url" : "http://gefyra.info/training/StructureDefinition/ISiKASKCoding",
+  "version" : "0.1.0",
+  "name" : "ISiKASKCoding",
+  "title" : "ISiKASKCoding",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-10-23",
+  "publisher" : "Gefyra GmbH",
+  "contact" : [
+    {
+      "name" : "Gefyra GmbH",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "https://gefyra.info/"
+        }
+      ]
+    }
+  ],
+  "description" : "Data Type profile for ASK Codings in ISiK",
+  "fhirVersion" : "4.0.1",
+  "kind" : "complex-type",
+  "abstract" : false,
+  "type" : "Coding",
+  "baseDefinition" : "http://fhir.de/StructureDefinition/CodingASK",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [
+      {
+        "id" : "Coding",
+        "path" : "Coding"
+      },
+      {
+        "id" : "Coding.system",
+        "path" : "Coding.system",
+        "short" : "System",
+        "comment" : "Motivation MS: URL des CodeSystems des kodierten Wertes.",
+        "mustSupport" : true
+      },
+      {
+        "id" : "Coding.code",
+        "path" : "Coding.code",
+        "short" : "Code",
+        "comment" : "Motivation MS: Kodierter Wert aus einem CodeSystem.",
+        "mustSupport" : true
+      },
+      {
+        "id" : "Coding.display",
+        "path" : "Coding.display",
+        "short" : "Display",
+        "comment" : "Motivation MS: Anzeigename des kodierten Wertes.",
+        "mustSupport" : true
+      }
+    ]
+  }
+}
+
+```

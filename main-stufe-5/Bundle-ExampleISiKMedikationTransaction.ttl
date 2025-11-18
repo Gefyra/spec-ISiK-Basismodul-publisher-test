@@ -1,0 +1,169 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://gefyra.info/training/Bundle/ExampleISiKMedikationTransaction> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleISiKMedikationTransaction"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ISiKMedikationTransaction"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ISiKMedikationTransaction>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "transaction"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [
+       fhir:v "http://my.source.server.local/fhir/MedicationStatement/ExampleISiKMedikationsInformation1"^^xsd:anyURI ;
+       fhir:l <http://my.source.server.local/fhir/MedicationStatement/ExampleISiKMedikationsInformation1>
+     ] ;
+     fhir:resource ( <http://my.source.server.local/fhir/MedicationStatement/ExampleISiKMedikationsInformation1> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "http://my.target.fhir.server.local/MedicationStatement"^^xsd:anyURI ;
+         fhir:l <http://my.target.fhir.server.local/MedicationStatement>
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://my.source.server.local/fhir/Medication/ExampleISiKMedikament1"^^xsd:anyURI ;
+       fhir:l <http://my.source.server.local/fhir/Medication/ExampleISiKMedikament1>
+     ] ;
+     fhir:resource ( <http://my.source.server.local/fhir/Medication/ExampleISiKMedikament1> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "http://my.target.fhir.server.local/Medication"^^xsd:anyURI ;
+         fhir:l <http://my.target.fhir.server.local/Medication>
+       ]
+     ]
+  ] ) . # 
+
+<http://my.source.server.local/fhir/MedicationStatement/ExampleISiKMedikationsInformation1> a fhir:MedicationStatement ;
+  fhir:id [ fhir:v "ExampleISiKMedikationsInformation1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ISiKMedikationsInformation"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ISiKMedikationsInformation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationStatement_ExampleISiKMedikationsInformation1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement ExampleISiKMedikationsInformation1</b></p><a name=\"ExampleISiKMedikationsInformation1\"> </a><a name=\"hcExampleISiKMedikationsInformation1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ISiKMedikationsInformation.html\">ISiKMedikationsInformation</a></p></div><p><b>ISiK Accepted Risk</b>: Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar.</p><p><b>ISiK Medikationsart</b>: <a href=\"CodeSystem-ISiKMedikationsartCS.html#ISiKMedikationsartCS-akut\">ISiK Medikationsart: akut</a> (Akutmedikation)</p><p><b>ISiK Selbstmedikation</b>: true</p><p><b>ISiK Behandlungsziel</b>: Schmerztherapie postoperativ</p><p><b>status</b>: Active</p><p><b>medication</b>: <a href=\"Medication-ExampleISiKMedikament1.html\">Medication Acetylcystein</a></p><p><b>subject</b>: <a href=\"Patient-PatientinMusterfrau.html\">Erika Fürstin von Musterfrau (official) Female, DoB: 1964-08-12 ( Private Krankenversicherung (use: secondary, ))</a></p><p><b>context</b>: <a href=\"Encounter-FachabteilungskontaktMinimal.html\">Encounter: identifier = Visit number; status = unknown; class = inpatient encounter (ActCode#IMP); type = Operation,Abteilungskontakt; serviceType = Innere Medizin; period = 2022-05-03 --&gt; 2022-05-05</a></p><p><b>effective</b>: 2021-07-01 --&gt; (ongoing)</p><p><b>dateAsserted</b>: 2021-07-01</p><p><b>reasonReference</b>: <a href=\"Condition-BehandlungsDiagnoseFreitext.html\">Condition </a></p><blockquote><p><b>dosage</b></p><p><b>timing</b>: Morning, Noon, Evening, Once</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1 Brausetablette<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ExtensionISiKAcceptedRisk"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ExtensionISiKAcceptedRisk>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ExtensionISiKMedikationsart"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ExtensionISiKMedikationsart>
+     ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [
+         fhir:v "http://gefyra.info/training/CodeSystem/ISiKMedikationsartCS"^^xsd:anyURI ;
+         fhir:l <http://gefyra.info/training/CodeSystem/ISiKMedikationsartCS>
+       ] ;
+       fhir:code [ fhir:v "akut" ]
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ExtensionISiKSelbstmedikation"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ExtensionISiKSelbstmedikation>
+     ] ;
+     fhir:value [
+       a fhir:Boolean ;
+       fhir:v true
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ExtensionISiKBehandlungsziel"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ExtensionISiKBehandlungsziel>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Schmerztherapie postoperativ"
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <http://gefyra.info/training/Medication/ExampleISiKMedikament1> ;
+     fhir:reference [ fhir:v "Medication/ExampleISiKMedikament1" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://gefyra.info/training/Patient/PatientinMusterfrau> ;
+     fhir:reference [ fhir:v "Patient/PatientinMusterfrau" ]
+  ] ; # 
+  fhir:context [
+     fhir:l <http://gefyra.info/training/Encounter/FachabteilungskontaktMinimal> ;
+     fhir:reference [ fhir:v "Encounter/FachabteilungskontaktMinimal" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2021-07-01"^^xsd:date ]
+  ] ; # 
+  fhir:dateAsserted [ fhir:v "2021-07-01"^^xsd:date] ; # 
+  fhir:reasonReference ( [
+     fhir:l <http://gefyra.info/training/Condition/BehandlungsDiagnoseFreitext> ;
+     fhir:reference [ fhir:v "Condition/BehandlungsDiagnoseFreitext" ]
+  ] ) ; # 
+  fhir:dosage ( [
+     fhir:timing [
+       fhir:repeat [
+         fhir:when ( [ fhir:v "MORN" ] [ fhir:v "NOON" ] [ fhir:v "EVE" ] )
+       ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "Brausetablette" ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "1" ]
+       ]
+     ] )
+  ] ) . # 
+
+<http://my.source.server.local/fhir/Medication/ExampleISiKMedikament1> a fhir:Medication ;
+  fhir:id [ fhir:v "ExampleISiKMedikament1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://gefyra.info/training/StructureDefinition/ISiKMedikament"^^xsd:anyURI ;
+       fhir:l <http://gefyra.info/training/StructureDefinition/ISiKMedikament>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "additional" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_ExampleISiKMedikament1\"> </a>Medikament codiert (Wirkstoff)</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhir.de/CodeSystem/bfarm/atc"^^xsd:anyURI ;
+         fhir:l <http://fhir.de/CodeSystem/bfarm/atc>
+       ] ;
+       fhir:version [ fhir:v "2024" ] ;
+       fhir:code [ fhir:v "V03AB23" ] ;
+       fhir:display [ fhir:v "Acetylcystein" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,882 @@
+{
+  "package": "info.gefyra.training",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "extensions": [
+    {
+      "url": "http://gefyra.info/training/StructureDefinition/ExtensionISiKAcceptedRisk",
+      "title": "ISiK Accepted Risk",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://gefyra.info/training/StructureDefinition/ExtensionISiKBehandlungsziel",
+      "title": "ISiK Behandlungsziel",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://gefyra.info/training/StructureDefinition/ExtensionISiKCapabilityStatementImportsExpectation",
+      "title": "ISiK CapabilityStatement Imports Expectation",
+      "types": [
+        "code"
+      ]
+    },
+    {
+      "url": "http://gefyra.info/training/StructureDefinition/ExtensionISiKMedicationRequestReplaces",
+      "title": "ISiK MedicationRequestReplaces",
+      "types": [
+        "Reference",
+        "string",
+        "Extension",
+        "string",
+        "uri",
+        "Identifier",
+        "string"
+      ]
+    },
+    {
+      "url": "http://gefyra.info/training/StructureDefinition/ExtensionISiKMedicationStatementReplaces",
+      "title": "ISiK MedicationStatementReplaces",
+      "types": [
+        "Reference",
+        "string",
+        "Extension",
+        "string",
+        "uri",
+        "Identifier",
+        "string"
+      ]
+    },
+    {
+      "url": "http://gefyra.info/training/StructureDefinition/ExtensionISiKMedikationsart",
+      "title": "ISiK Medikationsart",
+      "types": [
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://gefyra.info/training/StructureDefinition/ExtensionISiKRehaEntlassung",
+      "title": "ExtensionISiKRehaEntlassung",
+      "types": [
+        "Coding",
+        "Coding",
+        "Coding",
+        "Coding",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://gefyra.info/training/StructureDefinition/ExtensionISiKSelbstmedikation",
+      "title": "ISiK Selbstmedikation",
+      "types": [
+        "boolean"
+      ]
+    },
+    {
+      "url": "http://gefyra.info/training/StructureDefinition/ISiKMDRRelevanzFormularExtension",
+      "title": "ISiKMDRRelevanzFormularExtension",
+      "types": [
+        "Coding"
+      ]
+    },
+    {
+      "url": "http://gefyra.info/training/StructureDefinition/ISiKTerminPriorityExtension",
+      "title": "ISiKTerminPriorityExtension",
+      "types": [
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces",
+      "title": "AppointmentReplaces",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate",
+      "title": "PlannedEndDate",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate",
+      "title": "PlannedStartDate",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Schedule.name",
+      "title": "ScheduleName",
+      "types": [
+        "string"
+      ]
+    }
+  ],
+  "profiles": {
+    "Bundle": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKSubscriptionNotification",
+        "title": "ISiKSubscriptionNotification"
+      }
+    ],
+    "Parameters": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKSubscriptionStatus",
+        "title": "ISiK Subscription Status"
+      }
+    ],
+    "RiskAssessment": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKAMTSBewertung",
+        "title": "ISiK AMTS-Bewertung"
+      }
+    ],
+    "Account": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKAbrechnungsfall",
+        "title": "ISiKAbrechnungsfall"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-herzzeitvolumen",
+        "title": "SD MII ICU Herzzeitvolumen"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-ideales-koerpergewicht",
+        "title": "SD MII ICU Ideales Koerpergewicht"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-intrakranieller-druck-icp",
+        "title": "SD MII ICU Intrakranieller Druck ICP"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpergewicht-percentil-altersabhaengig",
+        "title": "SD MII ICU Koerpergewicht Percentil Altersabhaengig"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpergroesse-percentil-altersabhaengig",
+        "title": "SD MII ICU Koerpergroesse Percentil"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-achsel",
+        "title": "SD MII ICU Koerpertemperatur Achsel"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-atemwege",
+        "title": "SD MII ICU Koerpertemperatur Atemwege"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-blut",
+        "title": "SD MII ICU Koerpertemperatur Blut"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-brust",
+        "title": "SD MII ICU Koerpertemperatur Brust"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-brustwirbelsaeule",
+        "title": "SD MII ICU Koerpertemperatur Brustwirbelsaeule"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-gelenk",
+        "title": "SD MII ICU Koerpertemperatur Gelenk"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-generisch",
+        "title": "SD MII ICU Koerpertemperatur Generisch"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-halswirbelsaeule",
+        "title": "SD MII ICU Koerpertemperatur Halswirbelsaeule"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-harnblase",
+        "title": "SD MII ICU Koerpertemperatur Harnblase"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-kern",
+        "title": "SD MII ICU Koerpertemperatur Kern"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-leiste",
+        "title": "SD MII ICU Koerpertemperatur Leiste"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-lendenwirbelsaeule",
+        "title": "SD MII ICU Koerpertemperatur Lendenwirbelsaeule"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-myokard",
+        "title": "SD MII ICU Koerpertemperatur Myokard"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-nasal",
+        "title": "SD MII ICU Koerpertemperatur nasal"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-nasen-rachen-raum",
+        "title": "SD MII ICU Koerpertemperatur Nasen-Rachen-Raum"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-rektal",
+        "title": "SD MII ICU Koerpertemperatur rektal"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-speiseroehre",
+        "title": "SD MII ICU Koerpertemperatur Speiseroehre"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-stirn",
+        "title": "SD MII ICU Koerpertemperatur Stirn"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-trommelfell",
+        "title": "SD MII ICU Koerpertemperatur Trommelfell"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-unter-der-zunge",
+        "title": "SD MII ICU Koerpertemperatur unter der Zunge"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-vaginal",
+        "title": "SD MII ICU Koerpertemperatur vaginal"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksatrialer-druck",
+        "title": "SD MII ICU Linksatrialer Druck"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventri-herzindex-durch-indikatorverduennung",
+        "title": "SD MII ICU Linksventrikulaerer Herzindex durch Indikatorverduennung"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventri-herzzeitvolumen-durch-indikatorverd",
+        "title": "SD MII ICU Linksventrikulaeres Herzzeitvolumen Durch Indikatorverduennung"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventri-schlagvolumen-durch-indikatorverduennung",
+        "title": "SD MII ICU Linksventrikulaeres Schlagvolumen Durch Indikatorverduennung"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventri-schlagvolumenindex-durch-indikatorverd",
+        "title": "SD MII ICU Linksventrikulaerer Schlagvolumenindex Durch Indikatorverduennung"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventrikulaerer-druck",
+        "title": "SD MII ICU Linksventrikulaerer Druck"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventrikulaerer-herzindex",
+        "title": "SD MII ICU Linksventrikulaerer Herzindex"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventrikulaeres-schlagvolumen",
+        "title": "SD MII ICU Linksventrikulaeres Schlagvolumen"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventrikulaeres-schlagvolumenindex",
+        "title": "SD MII ICU Linksventrikulaeres Schlagvolumenindex"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-monitoring-und-vitaldaten",
+        "title": "SD MII ICU Monitoring und Vitaldaten"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-o2saettigung-im-arteriellen-blut-durch-pulsoxymetrie",
+        "title": "SD MII ICU Sauerstoffsaettigung Im Arteriellen Blut Durch Pulsoxymetrie"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-o2saettigung-im-blut-postduktal-durch-pulsoxymetrie",
+        "title": "SD MII ICU Sauerstoffsaettigung Im Blut Postduktal Durch Pulsoxymetrie"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-o2saettigung-im-blut-preduktal-durch-pulsoxymetrie",
+        "title": "SD MII ICU Sauerstoffsaettigung Im Blut Preduktal Durch Pulsoxymetrie"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-pulmonalarterieller-blutdruck",
+        "title": "SD MII ICU Pulmonalarterieller Blutdruck"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-pulmonalarterieller-wedge-druck",
+        "title": "SD MII ICU Pulmonalarterieller Wedge Druck"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-pulmonalvaskulaerer-widerstandsindex",
+        "title": "SD MII ICU Pulmonalvaskulaerer Widerstandsindex"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-puls",
+        "title": "SD MII ICU Puls"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-rechtsatrialer-druck",
+        "title": "SD MII ICU Rechtsatrialer Druck"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-rechtsventrikulaerer-druck",
+        "title": "SD MII ICU Rechtsventrikulaerer Druck"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-sonstige-pulsatile-druecke-generisch",
+        "title": "SD MII ICU Sonstige pulsatile Druecke Generisch"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-systemischer-vaskulaerer-widerstandsindex",
+        "title": "SD MII ICU Systemischer Vaskulaerer Widerstandsindex"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/sd-mii-icu-zentralvenoeser-blutdruck",
+        "title": "SD MII ICU Zentralvenoeser Blutdruck"
+      }
+    ],
+    "AllergyIntolerance": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKAllergieUnvertraeglichkeit",
+        "title": "ISiKAllergieUnvertraeglichkeit"
+      }
+    ],
+    "RelatedPerson": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKAngehoeriger",
+        "title": "ISiKAngehoeriger"
+      }
+    ],
+    "Composition": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKBerichtSubSysteme",
+        "title": "ISiKBerichtSubSysteme"
+      }
+    ],
+    "Binary": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKBinary",
+        "title": "ISiKBinary"
+      }
+    ],
+    "CodeSystem": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKCodeSystem",
+        "title": "ISiKCodeSystem"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKDiagnose",
+        "title": "ISiKDiagnose"
+      }
+    ],
+    "DocumentReference": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKDokumentenMetadaten",
+        "title": "Erforderliche Metadaten für Dokumentenaustausch in ISiK"
+      }
+    ],
+    "QuestionnaireResponse": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKFormularDaten",
+        "title": "Ausgefülltes ISiK-Formular"
+      }
+    ],
+    "Questionnaire": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKFormularDefinition",
+        "title": "ISiKFormularDefinition"
+      }
+    ],
+    "Schedule": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKKalender",
+        "title": "ISiKKalender"
+      }
+    ],
+    "Encounter": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKTerminKontaktMitGesundheitseinrichtung",
+        "title": "ISiKTerminKontaktMitGesundheitseinrichtung"
+      }
+    ],
+    "Medication": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKMedikament",
+        "title": "ISiKMedikament"
+      }
+    ],
+    "MedicationStatement": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKMedikationsInformation",
+        "title": "ISiKMedikationsInformation"
+      }
+    ],
+    "List": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKMedikationsListe",
+        "title": "ISiK Medikationsliste"
+      }
+    ],
+    "MedicationAdministration": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKMedikationsVerabreichung",
+        "title": "ISiKMedikationsVerabreichung"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKMedikationsVerordnung",
+        "title": "ISiKMedikationsVerordnung"
+      }
+    ],
+    "HealthcareService": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKMedizinischeBehandlungseinheit",
+        "title": "ISiKMedizinischeBehandlungseinheit"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKOrganisation",
+        "title": "ISiKOrganisation"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKOrganisationFachabteilung",
+        "title": "ISiKOrganisationFachabteilung"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKPatient",
+        "title": "ISiKPatient"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKPersonImGesundheitsberuf",
+        "title": "ISiKPersonImGesundheitsberuf"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKProzedur",
+        "title": "ISiKProzedur"
+      }
+    ],
+    "Location": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKStandort",
+        "title": "ISiKStandort"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKStandortBettenstellplatz",
+        "title": "ISiKStandortBettenstellplatz"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKStandortRaum",
+        "title": "ISiKStandortRaum"
+      }
+    ],
+    "Subscription": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKSubscription",
+        "title": "ISiK Subscription"
+      }
+    ],
+    "Appointment": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKTermin",
+        "title": "ISiKTermin"
+      }
+    ],
+    "Slot": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKTerminblock",
+        "title": "ISiKTerminblock"
+      }
+    ],
+    "ValueSet": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKValueSet",
+        "title": "ISiKValueSet"
+      }
+    ],
+    "Coverage": [
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisGesetzlich",
+        "title": "ISiKVersicherungsverhaeltnisGesetzlich"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisSelbstzahler",
+        "title": "ISiKVersicherungsverhaeltnisSelbstzahler"
+      },
+      {
+        "url": "http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisSonstige",
+        "title": "ISiKVersicherungsverhaeltnisSonstige"
+      }
+    ]
+  },
+  "usage": {
+    "http://fhir.de/StructureDefinition/Aufnahmegrund": [
+      "Encounter"
+    ],
+    "http://fhir.de/StructureDefinition/Entlassungsgrund": [
+      "Encounter.hospitalization.dischargeDisposition"
+    ],
+    "http://fhir.de/StructureDefinition/ExtensionAbrechnungsDiagnoseProzedur": [
+      "Account",
+      "Bundle.entry.resource"
+    ],
+    "http://fhir.de/StructureDefinition/ExtensionAbrechnungsart": [
+      "Account.coverage",
+      "Bundle.entry.resource.coverage"
+    ],
+    "http://fhir.de/StructureDefinition/ProzedurDokumentationsdatum": [
+      "Procedure"
+    ],
+    "http://fhir.de/StructureDefinition/Wahlleistung": [
+      "Bundle.entry.resource.hospitalization",
+      "Encounter.hospitalization"
+    ],
+    "http://fhir.de/StructureDefinition/WirkstofftypEX": [
+      "Medication.ingredient"
+    ],
+    "http://fhir.de/StructureDefinition/gender-amtlich-de": [
+      "Patient.gender",
+      "Practitioner.gender"
+    ],
+    "http://fhir.de/StructureDefinition/humanname-namenszusatz": [
+      "Patient.name.family",
+      "Practitioner.name.family",
+      "RelatedPerson.name.family"
+    ],
+    "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit": [
+      "Coding",
+      "Condition.code.coding"
+    ],
+    "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen": [
+      "Bundle.entry.resource.code.coding",
+      "Coding",
+      "Condition.code.coding"
+    ],
+    "http://fhir.de/StructureDefinition/lebensphase": [
+      "Condition.abatement[x]",
+      "Condition.onset[x]"
+    ],
+    "http://fhir.de/StructureDefinition/seitenlokalisation": [
+      "Coding",
+      "Condition.code.coding",
+      "Procedure.code.coding"
+    ],
+    "http://gefyra.info/training/StructureDefinition/ExtensionISiKAcceptedRisk": [
+      "Bundle.entry.resource",
+      "MedicationRequest",
+      "MedicationStatement",
+      "RiskAssessment"
+    ],
+    "http://gefyra.info/training/StructureDefinition/ExtensionISiKBehandlungsziel": [
+      "Bundle.entry.resource",
+      "MedicationRequest",
+      "MedicationStatement"
+    ],
+    "http://gefyra.info/training/StructureDefinition/ExtensionISiKCapabilityStatementImportsExpectation": [
+      "CapabilityStatement.imports"
+    ],
+    "http://gefyra.info/training/StructureDefinition/ExtensionISiKMedicationRequestReplaces": [
+      "MedicationRequest"
+    ],
+    "http://gefyra.info/training/StructureDefinition/ExtensionISiKMedicationStatementReplaces": [
+      "MedicationStatement"
+    ],
+    "http://gefyra.info/training/StructureDefinition/ExtensionISiKMedikationsart": [
+      "Bundle.entry.resource",
+      "MedicationRequest",
+      "MedicationStatement"
+    ],
+    "http://gefyra.info/training/StructureDefinition/ExtensionISiKRehaEntlassung": [
+      "Encounter.hospitalization.dischargeDisposition"
+    ],
+    "http://gefyra.info/training/StructureDefinition/ExtensionISiKSelbstmedikation": [
+      "Bundle.entry.resource",
+      "MedicationStatement"
+    ],
+    "http://gefyra.info/training/StructureDefinition/ISiKMDRRelevanzFormularExtension": [
+      "Questionnaire",
+      "QuestionnaireResponse"
+    ],
+    "http://gefyra.info/training/StructureDefinition/ISiKTerminPriorityExtension": [
+      "Appointment.priority"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces": [
+      "Appointment"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate": [
+      "Encounter"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate": [
+      "Encounter"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Schedule.name": [
+      "Schedule"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
+      "CapabilityStatement.document",
+      "CapabilityStatement.rest.interaction",
+      "CapabilityStatement.rest.resource",
+      "CapabilityStatement.rest.resource.interaction",
+      "CapabilityStatement.rest.resource.operation",
+      "CapabilityStatement.rest.resource.searchInclude",
+      "CapabilityStatement.rest.resource.searchParam",
+      "CapabilityStatement.rest.resource.searchRevInclude",
+      "CapabilityStatement.rest.resource.supportedProfile"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/condition-related": [
+      "Bundle.entry.resource",
+      "Condition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "Patient.birthDate",
+      "Practitioner.birthDate"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/display": [
+      "QuestionnaireResponse.questionnaire"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.differential.element.constraint",
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.differential.element.binding",
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/entryFormat": [
+      "Questionnaire.item.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/humanname-own-name": [
+      "Patient.name.family",
+      "Practitioner.name.family",
+      "RelatedPerson.name.family"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix": [
+      "Patient.name.family",
+      "Practitioner.name.family",
+      "RelatedPerson.name.family"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator": [
+      "Organization.address.line",
+      "Patient.address.line",
+      "Practitioner.address.line",
+      "RelatedPerson.address.line"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber": [
+      "Organization.address.line",
+      "Patient.address.line",
+      "Practitioner.address.line",
+      "RelatedPerson.address.line",
+      "StructureDefinition.snapshot.element.example.valueString"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox": [
+      "Organization.address.line",
+      "Patient.address.line",
+      "Practitioner.address.line",
+      "RelatedPerson.address.line"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct": [
+      "Organization.address",
+      "Patient.address",
+      "Practitioner.address",
+      "RelatedPerson.address"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName": [
+      "Organization.address.line",
+      "Patient.address.line",
+      "Practitioner.address.line",
+      "RelatedPerson.address.line",
+      "StructureDefinition.snapshot.element.example.valueString"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier": [
+      "Patient.name.prefix",
+      "Practitioner.name.prefix",
+      "RelatedPerson.name.prefix"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/maxDecimalPlaces": [
+      "Questionnaire.item.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/maxValue": [
+      "Questionnaire.item.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/minLength": [
+      "Questionnaire.item.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/minValue": [
+      "Questionnaire.item.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/ordinalValue": [
+      "ValueSet.compose.include.concept"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs": [
+      "Questionnaire.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs": [
+      "Questionnaire.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/questionnaire-unit": [
+      "Questionnaire.item.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
+      "CodeSystem",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "CodeSystem",
+      "StructureDefinition.snapshot.element",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
+      "CodeSystem",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/targetConstraint": [
+      "Questionnaire.item"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression": [
+      "Questionnaire.item.item"
+    ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext": [
+      "Questionnaire"
+    ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observation-extract-category": [
+      "Questionnaire.item.item"
+    ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract": [
+      "Questionnaire.item.item"
+    ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod": [
+      "Questionnaire.item.item"
+    ],
+    "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-channel-type": [
+      "Subscription.channel.type"
+    ],
+    "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria": [
+      "Subscription.criteria"
+    ],
+    "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-heartbeat-period": [
+      "Subscription.channel"
+    ],
+    "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-max-count": [
+      "Subscription.channel"
+    ],
+    "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-payload-content": [
+      "Subscription.channel.payload"
+    ],
+    "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-timeout": [
+      "Subscription.channel"
+    ]
+  }
+}

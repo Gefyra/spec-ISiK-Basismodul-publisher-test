@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ISiKMedikationsartVS",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ISiKMedikationsartVS</b></p><a name=\"ISiKMedikationsartVS\"> </a><a name=\"hcISiKMedikationsartVS\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-ISiKMedikationsartCS.html\"><code>http://gefyra.info/training/CodeSystem/ISiKMedikationsartCS</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "http://gefyra.info/training/ValueSet/ISiKMedikationsartVS",
+  "version" : "0.1.0",
+  "name" : "ISiKMedikationsartVS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-10-23",
+  "publisher" : "Gefyra GmbH",
+  "contact" : [{
+    "name" : "Gefyra GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://gefyra.info/"
+    }]
+  }],
+  "description" : "ISiK Therapiearten für Medikation",
+  "compose" : {
+    "include" : [{
+      "system" : "http://gefyra.info/training/CodeSystem/ISiKMedikationsartCS"
+    }]
+  }
+}

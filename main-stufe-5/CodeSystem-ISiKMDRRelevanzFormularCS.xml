@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="ISiKMDRRelevanzFormularCS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem ISiKMDRRelevanzFormularCS</b></p><a name="ISiKMDRRelevanzFormularCS"> </a><a name="hcISiKMDRRelevanzFormularCS"> </a><p>This  code system <code>http://gefyra.info/training/CodeSystem/ISiKMDRRelevanzFormularCS</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">rel<a name="ISiKMDRRelevanzFormularCS-rel"> </a></td><td>relevant (nicht näher spezifiziert)</td><td>Questionnaire oder QuestionnaireResponse fallen laut Zweckbestimmung unter die MDR (genauere Spezifikationen können in weiteren Ausbaustufen folgen.)</td></tr></table></div>
+  </text>
+  <url value="http://gefyra.info/training/CodeSystem/ISiKMDRRelevanzFormularCS"/>
+  <version value="0.1.0"/>
+  <name value="ISiKMDRRelevanzFormular"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-10-23"/>
+  <publisher value="Gefyra GmbH"/>
+  <contact>
+    <name value="Gefyra GmbH"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://gefyra.info/"/>
+    </telecom>
+  </contact>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="rel"/>
+    <display value="relevant (nicht näher spezifiziert)"/>
+    <definition value="Questionnaire oder QuestionnaireResponse fallen laut Zweckbestimmung unter die MDR (genauere Spezifikationen können in weiteren Ausbaustufen folgen.)"/>
+  </concept>
+</CodeSystem>

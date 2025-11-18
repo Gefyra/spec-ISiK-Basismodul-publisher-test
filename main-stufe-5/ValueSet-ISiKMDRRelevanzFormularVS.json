@@ -1,0 +1,27 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ISiKMDRRelevanzFormularVS",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ISiKMDRRelevanzFormularVS</b></p><a name=\"ISiKMDRRelevanzFormularVS\"> </a><a name=\"hcISiKMDRRelevanzFormularVS\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-ISiKMDRRelevanzFormularCS.html\"><code>http://gefyra.info/training/CodeSystem/ISiKMDRRelevanzFormularCS</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "http://gefyra.info/training/ValueSet/ISiKMDRRelevanzFormularVS",
+  "version" : "0.1.0",
+  "name" : "ISiKMDRRelevanzFormularVS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-10-23",
+  "publisher" : "Gefyra GmbH",
+  "contact" : [{
+    "name" : "Gefyra GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://gefyra.info/"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://gefyra.info/training/CodeSystem/ISiKMDRRelevanzFormularCS"
+    }]
+  }
+}

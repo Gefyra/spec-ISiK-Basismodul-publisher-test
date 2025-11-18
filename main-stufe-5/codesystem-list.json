@@ -1,0 +1,77 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://example.org/fhir/CodeSystem/TestKatalog",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "TestKatalog",
+      "title" : null,
+      "description" : ""
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKBehandlungsergebnisRehaCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKBehandlungsergebnisReha",
+      "title" : null,
+      "description" : "Behandlungsergebnis Reha gemäß §301(4 UND 4A) SGB V. Diagnosenbezogene Bewertung des Behandlungsergebnisses für einen Versicherten/Berechtigten bei Entlassung aus der Reha-Maßnahme bzw. Stellung eines Antrags auf Verlängerung. Vgl. Schlüsseltabelle 2.71 Diagnose - Behandlungsergebnis."
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKBesondereBehandlungsformRehaCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKBesondereBehandlungsformReha",
+      "title" : null,
+      "description" : "Besondere Behandlungsform der Reha gemäß §301(4 UND 4A) SGB V. Vgl. Schlüsseltabelle 2.51 Besondere Behandlungsformen."
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKEntlassformRehaCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKEntlassformReha",
+      "title" : null,
+      "description" : "ISiK Entlassform Reha. Beschreibt Form und ggf. Weiterbehandlung der Entlassung eines Versicherten/Berechtigten aus verwaltungs- und medizinischer Sicht. Vgl. Schlüsseltabelle 2.107 Entlassungsform."
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKMDRRelevanzFormularCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKMDRRelevanzFormular",
+      "title" : null,
+      "description" : ""
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKMedikationsartCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKMedikationsartCS",
+      "title" : "ISiK Medikationsart",
+      "description" : "ISiK Therapiearten für Medikation"
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKSubscriptionTopic",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKSubscriptionTopic",
+      "title" : "ISiK-SubscriptionTopic",
+      "description" : "Liste der aller SubscriptionTopics, die in ISiK verwendet werden können. Neben den merge-SubscriptionTopics sind auch die SubscriptionTopics für Updates der Ressourcen enthalten, die in ISiK verwendet werden können."
+    },
+    {
+      "url" : "http://gefyra.info/training/CodeSystem/ISiKUnterbrechungRehaCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ISiKUnterbrechungReha",
+      "title" : null,
+      "description" : "ISiK Unterbrechung Reha. Dokumentiert die relevanten Gründe einer Unterbrechung einer Rehabilitationsmaßnahme im Einzelfall. Vgl. Schlüsseltabelle 2.111 Erläuterung zur Unterbrechung."
+    },
+    {
+      "url" : "http://hl7.org/fhir/subscription-notification-type",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "SubscriptionNotificationTypeCS",
+      "title" : "SubscriptionNotificationType",
+      "description" : "The type of notification represented by the status message.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1524"]
+    }
+  ]
+}

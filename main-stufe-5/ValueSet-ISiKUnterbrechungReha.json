@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ISiKUnterbrechungReha",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ISiKUnterbrechungReha</b></p><a name=\"ISiKUnterbrechungReha\"> </a><a name=\"hcISiKUnterbrechungReha\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-ISiKUnterbrechungRehaCS.html\"><code>http://gefyra.info/training/CodeSystem/ISiKUnterbrechungRehaCS</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "http://gefyra.info/training/ValueSet/ISiKUnterbrechungReha",
+  "version" : "0.1.0",
+  "name" : "ISiKUnterbrechungRehaVS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-10-23",
+  "publisher" : "Gefyra GmbH",
+  "contact" : [{
+    "name" : "Gefyra GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://gefyra.info/"
+    }]
+  }],
+  "description" : "ISiK Unterbrechung Reha. Dokumentiert die relevanten Gründe einer Unterbrechung einer Rehabilitationsmaßnahme im Einzelfall. Vgl. Schlüsseltabelle 2.111 Erläuterung zur Unterbrechung.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://gefyra.info/training/CodeSystem/ISiKUnterbrechungRehaCS"
+    }]
+  }
+}

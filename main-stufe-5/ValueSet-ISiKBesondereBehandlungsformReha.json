@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ISiKBesondereBehandlungsformReha",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ISiKBesondereBehandlungsformReha</b></p><a name=\"ISiKBesondereBehandlungsformReha\"> </a><a name=\"hcISiKBesondereBehandlungsformReha\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-ISiKBesondereBehandlungsformRehaCS.html\"><code>http://gefyra.info/training/CodeSystem/ISiKBesondereBehandlungsformRehaCS</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "http://gefyra.info/training/ValueSet/ISiKBesondereBehandlungsformReha",
+  "version" : "0.1.0",
+  "name" : "ISiKBesondereBehandlungsformRehaVS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-10-23",
+  "publisher" : "Gefyra GmbH",
+  "contact" : [{
+    "name" : "Gefyra GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://gefyra.info/"
+    }]
+  }],
+  "description" : "Besondere Behandlungsform der Reha gemäß §301(4 UND 4A) SGB V. Vgl. Schlüsseltabelle 2.51 Besondere Behandlungsformen.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://gefyra.info/training/CodeSystem/ISiKBesondereBehandlungsformRehaCS"
+    }]
+  }
+}

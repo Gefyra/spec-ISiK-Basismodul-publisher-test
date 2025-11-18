@@ -1,0 +1,1726 @@
+[
+  {
+    "id" : "CodeSystemExample",
+    "type" : "CodeSystem",
+    "url" : "http://example.org/fhir/CodeSystem/TestKatalog",
+    "version" : "0.1.0",
+    "name" : "TestKatalog"
+  },
+  {
+    "id" : "ISiKValueSetExample",
+    "type" : "ValueSet",
+    "url" : "http://example.org/fhir/ValueSet/TestValueSet",
+    "version" : "0.1.0",
+    "name" : "TestValueSet"
+  },
+  {
+    "id" : "ISiKCapabilityStatementLaborMinimalRolle",
+    "type" : "CapabilityStatement",
+    "url" : "http://gefyra.info/training/CapabilityStatement/ISiKCapabilityStatementLaborMinimalRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementLaborMinimalRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementTerminRepositoryAkteur",
+    "type" : "CapabilityStatement",
+    "url" : "http://gefyra.info/training/CapabilityStatement/ISiKCapabilityStatementTerminRepositoryAkteur",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementTerminRepositoryAkteur"
+  },
+  {
+    "id" : "ISiKCapabilityStatementTerminRepositoryRolle",
+    "type" : "CapabilityStatement",
+    "url" : "http://gefyra.info/training/CapabilityStatement/ISiKCapabilityStatementTerminRepositoryRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementTerminRepositoryRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementVitalSignICUSourceExtendedAkteur",
+    "type" : "CapabilityStatement",
+    "url" : "http://gefyra.info/training/CapabilityStatement/ISiKCapabilityStatementVitalSignICUSourceExtendedAkteur",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementVitalSignICUSourceExtendedAkteur"
+  },
+  {
+    "id" : "ISiKCapabilityStatementVitalSignICUSourceExtendedRolle",
+    "type" : "CapabilityStatement",
+    "url" : "http://gefyra.info/training/CapabilityStatement/ISiKCapabilityStatementVitalSignICUSourceExtendedRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementVitalSignICUSourceExtendedRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementVitalSignICUSourceMinimalAkteur",
+    "type" : "CapabilityStatement",
+    "url" : "http://gefyra.info/training/CapabilityStatement/ISiKCapabilityStatementVitalSignICUSourceMinimalAkteur",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementVitalSignICUSourceMinimalAkteur"
+  },
+  {
+    "id" : "ISiKCapabilityStatementVitalSignICUSourceMinimalRolle",
+    "type" : "CapabilityStatement",
+    "url" : "http://gefyra.info/training/CapabilityStatement/ISiKCapabilityStatementVitalSignICUSourceMinimalRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementVitalSignICUSourceMinimalRolle"
+  },
+  {
+    "id" : "ISiKBehandlungsergebnisRehaCS",
+    "type" : "CodeSystem",
+    "url" : "http://gefyra.info/training/CodeSystem/ISiKBehandlungsergebnisRehaCS",
+    "version" : "0.1.0",
+    "name" : "ISiKBehandlungsergebnisReha"
+  },
+  {
+    "id" : "ISiKBesondereBehandlungsformRehaCS",
+    "type" : "CodeSystem",
+    "url" : "http://gefyra.info/training/CodeSystem/ISiKBesondereBehandlungsformRehaCS",
+    "version" : "0.1.0",
+    "name" : "ISiKBesondereBehandlungsformReha"
+  },
+  {
+    "id" : "ISiKEntlassformRehaCS",
+    "type" : "CodeSystem",
+    "url" : "http://gefyra.info/training/CodeSystem/ISiKEntlassformRehaCS",
+    "version" : "0.1.0",
+    "name" : "ISiKEntlassformReha"
+  },
+  {
+    "id" : "ISiKMDRRelevanzFormularCS",
+    "type" : "CodeSystem",
+    "url" : "http://gefyra.info/training/CodeSystem/ISiKMDRRelevanzFormularCS",
+    "version" : "0.1.0",
+    "name" : "ISiKMDRRelevanzFormular"
+  },
+  {
+    "id" : "ISiKMedikationsartCS",
+    "type" : "CodeSystem",
+    "url" : "http://gefyra.info/training/CodeSystem/ISiKMedikationsartCS",
+    "version" : "0.1.0",
+    "name" : "ISiKMedikationsartCS"
+  },
+  {
+    "id" : "ISiKSubscriptionTopic",
+    "type" : "CodeSystem",
+    "url" : "http://gefyra.info/training/CodeSystem/ISiKSubscriptionTopic",
+    "version" : "0.1.0",
+    "name" : "ISiKSubscriptionTopic"
+  },
+  {
+    "id" : "ISiKUnterbrechungRehaCS",
+    "type" : "CodeSystem",
+    "url" : "http://gefyra.info/training/CodeSystem/ISiKUnterbrechungRehaCS",
+    "version" : "0.1.0",
+    "name" : "ISiKUnterbrechungReha"
+  },
+  {
+    "id" : "info.gefyra.training",
+    "type" : "ImplementationGuide",
+    "url" : "http://gefyra.info/training/ImplementationGuide/info.gefyra.training",
+    "version" : "0.1.0",
+    "name" : "SchulungsIG"
+  },
+  {
+    "id" : "Encounter-date-start",
+    "type" : "SearchParameter",
+    "url" : "http://gefyra.info/training/SearchParameter/Encounter-date-start",
+    "version" : "0.1.0",
+    "name" : "DateStart"
+  },
+  {
+    "id" : "Encounter-end-date",
+    "type" : "SearchParameter",
+    "url" : "http://gefyra.info/training/SearchParameter/Encounter-end-date",
+    "version" : "0.1.0",
+    "name" : "EndDate"
+  },
+  {
+    "id" : "BackportSubscriptionNotificationR4Fixed",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/BackportSubscriptionNotificationR4Fixed",
+    "version" : "0.1.0",
+    "name" : "BackportSubscriptionNotificationR4Fixed"
+  },
+  {
+    "id" : "BackportSubscriptionStatusR4Fixed",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/BackportSubscriptionStatusR4Fixed",
+    "version" : "0.1.0",
+    "name" : "BackportSubscriptionStatusR4Fixed"
+  },
+  {
+    "id" : "ExtensionISiKAcceptedRisk",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ExtensionISiKAcceptedRisk",
+    "version" : "0.1.0",
+    "name" : "ExtensionISiKAcceptedRisk"
+  },
+  {
+    "id" : "ExtensionISiKBehandlungsziel",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ExtensionISiKBehandlungsziel",
+    "version" : "0.1.0",
+    "name" : "ExtensionISiKBehandlungsziel"
+  },
+  {
+    "id" : "ExtensionISiKCapabilityStatementImportsExpectation",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ExtensionISiKCapabilityStatementImportsExpectation",
+    "version" : "0.1.0",
+    "name" : "ExtensionISiKCapabilityStatementImportsExpectation"
+  },
+  {
+    "id" : "ExtensionISiKMedicationRequestReplaces",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ExtensionISiKMedicationRequestReplaces",
+    "version" : "0.1.0",
+    "name" : "ExtensionISiKMedicationRequestReplaces"
+  },
+  {
+    "id" : "ExtensionISiKMedicationStatementReplaces",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ExtensionISiKMedicationStatementReplaces",
+    "version" : "0.1.0",
+    "name" : "ExtensionISiKMedicationStatementReplaces"
+  },
+  {
+    "id" : "ExtensionISiKMedikationsart",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ExtensionISiKMedikationsart",
+    "version" : "0.1.0",
+    "name" : "ExtensionISiKMedikationsart"
+  },
+  {
+    "id" : "ExtensionISiKRehaEntlassung",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ExtensionISiKRehaEntlassung",
+    "version" : "0.1.0",
+    "name" : "ExtensionISiKRehaEntlassung"
+  },
+  {
+    "id" : "ExtensionISiKSelbstmedikation",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ExtensionISiKSelbstmedikation",
+    "version" : "0.1.0",
+    "name" : "ExtensionISiKSelbstmedikation"
+  },
+  {
+    "id" : "ISiKAMTSBewertung",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKAMTSBewertung",
+    "version" : "0.1.0",
+    "name" : "ISiKAMTSBewertung"
+  },
+  {
+    "id" : "ISiKASKCoding",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKASKCoding",
+    "version" : "0.1.0",
+    "name" : "ISiKASKCoding"
+  },
+  {
+    "id" : "ISiKATCCoding",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKATCCoding",
+    "version" : "0.1.0",
+    "name" : "ISiKATCCoding"
+  },
+  {
+    "id" : "ISiKAbrechnungsfall",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKAbrechnungsfall",
+    "version" : "0.1.0",
+    "name" : "ISiKAbrechnungsfall"
+  },
+  {
+    "id" : "ISiKAlkoholAbusus",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKAlkoholAbusus",
+    "version" : "0.1.0",
+    "name" : "ISiKAlkoholAbusus"
+  },
+  {
+    "id" : "ISiKAllergieUnvertraeglichkeit",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKAllergieUnvertraeglichkeit",
+    "version" : "0.1.0",
+    "name" : "ISiKAllergieUnvertraeglichkeit"
+  },
+  {
+    "id" : "ISiKAngehoeriger",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKAngehoeriger",
+    "version" : "0.1.0",
+    "name" : "ISiKAngehoeriger"
+  },
+  {
+    "id" : "ISiKAtemfrequenz",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKAtemfrequenz",
+    "version" : "0.1.0",
+    "name" : "ISiKAtemfrequenz"
+  },
+  {
+    "id" : "ISiKBerichtBundle",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKBerichtBundle",
+    "version" : "0.1.0",
+    "name" : "ISiKBerichtBundle"
+  },
+  {
+    "id" : "ISiKBerichtSubSysteme",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKBerichtSubSysteme",
+    "version" : "0.1.0",
+    "name" : "ISiKBerichtSubSysteme"
+  },
+  {
+    "id" : "ISiKBinary",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKBinary",
+    "version" : "0.1.0",
+    "name" : "ISiKBinary"
+  },
+  {
+    "id" : "ISiKBlutdruckSystemischArteriell",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKBlutdruckSystemischArteriell",
+    "version" : "0.1.0",
+    "name" : "ISiKBlutdruckSystemischArteriell"
+  },
+  {
+    "id" : "ISiKCodeSystem",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKCodeSystem",
+    "version" : "0.1.0",
+    "name" : "ISiKCodeSystem"
+  },
+  {
+    "id" : "ISiKCoding",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKCoding",
+    "version" : "0.1.0",
+    "name" : "ISiKCoding"
+  },
+  {
+    "id" : "ISiKDiagnose",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKDiagnose",
+    "version" : "0.1.0",
+    "name" : "ISiKDiagnose"
+  },
+  {
+    "id" : "ISiKDokumentenMetadaten",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKDokumentenMetadaten",
+    "version" : "0.1.0",
+    "name" : "ISiKDokumentenMetadaten"
+  },
+  {
+    "id" : "ISiKDokumentenSuchergebnisse",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKDokumentenSuchergebnisse",
+    "version" : "0.1.0",
+    "name" : "ISiKDokumentenSuchergebnisse"
+  },
+  {
+    "id" : "ISiKEKG",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKEKG",
+    "version" : "0.1.0",
+    "name" : "ISiKEKG"
+  },
+  {
+    "id" : "ISiKFormularDaten",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKFormularDaten",
+    "version" : "0.1.0",
+    "name" : "ISiKFormularDaten"
+  },
+  {
+    "id" : "ISiKFormularDefinition",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKFormularDefinition",
+    "version" : "0.1.0",
+    "name" : "ISiKFormularDefinition"
+  },
+  {
+    "id" : "ISiKGCS",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKGCS",
+    "version" : "0.1.0",
+    "name" : "ISiKGCS"
+  },
+  {
+    "id" : "ISiKHerzfrequenz",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKHerzfrequenz",
+    "version" : "0.1.0",
+    "name" : "ISiKHerzfrequenz"
+  },
+  {
+    "id" : "ISiKICD10GMCoding",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKICD10GMCoding",
+    "version" : "0.1.0",
+    "name" : "ISiKICD10GMCoding"
+  },
+  {
+    "id" : "ISiKKalender",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKKalender",
+    "version" : "0.1.0",
+    "name" : "ISiKKalender"
+  },
+  {
+    "id" : "ISiKKoerpergewicht",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKKoerpergewicht",
+    "version" : "0.1.0",
+    "name" : "ISiKKoerpergewicht"
+  },
+  {
+    "id" : "ISiKKoerpergroesse",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKKoerpergroesse",
+    "version" : "0.1.0",
+    "name" : "ISiKKoerpergroesse"
+  },
+  {
+    "id" : "ISiKKoerperkerntemperatur",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKKoerperkerntemperatur",
+    "version" : "0.1.0",
+    "name" : "ISiKKoerperkerntemperatur"
+  },
+  {
+    "id" : "ISiKKoerpertemperatur",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKKoerpertemperatur",
+    "version" : "0.1.0",
+    "name" : "ISiKKoerpertemperatur"
+  },
+  {
+    "id" : "ISiKKontaktGesundheitseinrichtung",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKKontaktGesundheitseinrichtung",
+    "version" : "0.1.0",
+    "name" : "ISiKKontaktGesundheitseinrichtung"
+  },
+  {
+    "id" : "ISiKKopfumfang",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKKopfumfang",
+    "version" : "0.1.0",
+    "name" : "ISiKKopfumfang"
+  },
+  {
+    "id" : "ISiKLaboruntersuchung",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKLaboruntersuchung",
+    "version" : "0.1.0",
+    "name" : "ISiKLaboruntersuchung"
+  },
+  {
+    "id" : "ISiKLaboruntersuchungCRP",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKLaboruntersuchungCRP",
+    "version" : "0.1.0",
+    "name" : "ISiKLaboruntersuchungCRP"
+  },
+  {
+    "id" : "ISiKLaboruntersuchungGFR",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKLaboruntersuchungGFR",
+    "version" : "0.1.0",
+    "name" : "ISiKLaboruntersuchungGFR"
+  },
+  {
+    "id" : "ISiKLaboruntersuchungHb",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKLaboruntersuchungHb",
+    "version" : "0.1.0",
+    "name" : "ISiKLaboruntersuchungHb"
+  },
+  {
+    "id" : "ISiKLaboruntersuchungPCT",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKLaboruntersuchungPCT",
+    "version" : "0.1.0",
+    "name" : "ISiKLaboruntersuchungPCT"
+  },
+  {
+    "id" : "ISiKLaboruntersuchungSerumkreatinin",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKLaboruntersuchungSerumkreatinin",
+    "version" : "0.1.0",
+    "name" : "ISiKLaboruntersuchungSerumkreatinin"
+  },
+  {
+    "id" : "ISiKLaboruntersuchungTSH",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKLaboruntersuchungTSH",
+    "version" : "0.1.0",
+    "name" : "ISiKLaboruntersuchungTSH"
+  },
+  {
+    "id" : "ISiKLaboruntersuchungThrombozyten",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKLaboruntersuchungThrombozyten",
+    "version" : "0.1.0",
+    "name" : "ISiKLaboruntersuchungThrombozyten"
+  },
+  {
+    "id" : "ISiKLaboruntersuchungTroponin",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKLaboruntersuchungTroponin",
+    "version" : "0.1.0",
+    "name" : "ISiKLaboruntersuchungTroponin"
+  },
+  {
+    "id" : "ISiKLebensZustand",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKLebensZustand",
+    "version" : "0.1.0",
+    "name" : "ISiKLebensZustand"
+  },
+  {
+    "id" : "ISiKLoincCoding",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKLoincCoding",
+    "version" : "0.1.0",
+    "name" : "ISiKLoincCoding"
+  },
+  {
+    "id" : "ISiKMDRRelevanzFormularExtension",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKMDRRelevanzFormularExtension",
+    "version" : "0.1.0",
+    "name" : "ISiKMDRRelevanzFormularExtension"
+  },
+  {
+    "id" : "ISiKMedikament",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKMedikament",
+    "version" : "0.1.0",
+    "name" : "ISiKMedikament"
+  },
+  {
+    "id" : "ISiKMedikationTransaction",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKMedikationTransaction",
+    "version" : "0.1.0",
+    "name" : "ISiKMedikationTransaction"
+  },
+  {
+    "id" : "ISiKMedikationTransactionResponse",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKMedikationTransactionResponse",
+    "version" : "0.1.0",
+    "name" : "ISiKMedikationTransactionResponse"
+  },
+  {
+    "id" : "ISiKMedikationsInformation",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKMedikationsInformation",
+    "version" : "0.1.0",
+    "name" : "ISiKMedikationsInformation"
+  },
+  {
+    "id" : "ISiKMedikationsListe",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKMedikationsListe",
+    "version" : "0.1.0",
+    "name" : "ISiKMedikationsListe"
+  },
+  {
+    "id" : "ISiKMedikationsVerabreichung",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKMedikationsVerabreichung",
+    "version" : "0.1.0",
+    "name" : "ISiKMedikationsVerabreichung"
+  },
+  {
+    "id" : "ISiKMedikationsVerordnung",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKMedikationsVerordnung",
+    "version" : "0.1.0",
+    "name" : "ISiKMedikationsVerordnung"
+  },
+  {
+    "id" : "ISiKMedizinischeBehandlungseinheit",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKMedizinischeBehandlungseinheit",
+    "version" : "0.1.0",
+    "name" : "ISiKMedizinischeBehandlungseinheit"
+  },
+  {
+    "id" : "ISiKOrganisation",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKOrganisation",
+    "version" : "0.1.0",
+    "name" : "ISiKOrganisation"
+  },
+  {
+    "id" : "ISiKOrganisationFachabteilung",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKOrganisationFachabteilung",
+    "version" : "0.1.0",
+    "name" : "ISiKOrganisationFachabteilung"
+  },
+  {
+    "id" : "ISiKPZNCoding",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKPZNCoding",
+    "version" : "0.1.0",
+    "name" : "ISiKPZNCoding"
+  },
+  {
+    "id" : "ISiKPatient",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKPatient",
+    "version" : "0.1.0",
+    "name" : "ISiKPatient"
+  },
+  {
+    "id" : "ISiKPersonImGesundheitsberuf",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKPersonImGesundheitsberuf",
+    "version" : "0.1.0",
+    "name" : "ISiKPersonImGesundheitsberuf"
+  },
+  {
+    "id" : "ISiKProzedur",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKProzedur",
+    "version" : "0.1.0",
+    "name" : "ISiKProzedur"
+  },
+  {
+    "id" : "ISiKRaucherStatus",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKRaucherStatus",
+    "version" : "0.1.0",
+    "name" : "ISiKRaucherStatus"
+  },
+  {
+    "id" : "ISiKSauerstoffsaettigungArteriell",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKSauerstoffsaettigungArteriell",
+    "version" : "0.1.0",
+    "name" : "ISiKSauerstoffsaettigungArteriell"
+  },
+  {
+    "id" : "ISiKSchwangerschaftErwarteterEntbindungstermin",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKSchwangerschaftErwarteterEntbindungstermin",
+    "version" : "0.1.0",
+    "name" : "ISiKSchwangerschaftErwarteterEntbindungstermin"
+  },
+  {
+    "id" : "ISiKSchwangerschaftsstatus",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKSchwangerschaftsstatus",
+    "version" : "0.1.0",
+    "name" : "ISiKSchwangerschaftsstatus"
+  },
+  {
+    "id" : "ISiKSnomedCTCoding",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKSnomedCTCoding",
+    "version" : "0.1.0",
+    "name" : "ISiKSnomedCTCoding"
+  },
+  {
+    "id" : "ISiKStandort",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKStandort",
+    "version" : "0.1.0",
+    "name" : "ISiKStandort"
+  },
+  {
+    "id" : "ISiKStandortBettenstellplatz",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKStandortBettenstellplatz",
+    "version" : "0.1.0",
+    "name" : "ISiKStandortBettenstellplatz"
+  },
+  {
+    "id" : "ISiKStandortRaum",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKStandortRaum",
+    "version" : "0.1.0",
+    "name" : "ISiKStandortRaum"
+  },
+  {
+    "id" : "ISiKStillstatus",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKStillstatus",
+    "version" : "0.1.0",
+    "name" : "ISiKStillstatus"
+  },
+  {
+    "id" : "ISiKSubscription",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKSubscription",
+    "version" : "0.1.0",
+    "name" : "ISiKSubscription"
+  },
+  {
+    "id" : "ISiKSubscriptionNotification",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKSubscriptionNotification",
+    "version" : "0.1.0",
+    "name" : "ISiKSubscriptionNotification"
+  },
+  {
+    "id" : "ISiKSubscriptionStatus",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKSubscriptionStatus",
+    "version" : "0.1.0",
+    "name" : "ISiKSubscriptionStatus"
+  },
+  {
+    "id" : "ISiKTermin",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKTermin",
+    "version" : "0.1.0",
+    "name" : "ISiKTermin"
+  },
+  {
+    "id" : "ISiKTerminKontaktMitGesundheitseinrichtung",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKTerminKontaktMitGesundheitseinrichtung",
+    "version" : "0.1.0",
+    "name" : "ISiKTerminKontaktMitGesundheitseinrichtung"
+  },
+  {
+    "id" : "ISiKTerminPriorityExtension",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKTerminPriorityExtension",
+    "version" : "0.1.0",
+    "name" : "ISiKTerminPriorityExtension"
+  },
+  {
+    "id" : "ISiKTerminblock",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKTerminblock",
+    "version" : "0.1.0",
+    "name" : "ISiKTerminblock"
+  },
+  {
+    "id" : "ISiKValueSet",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKValueSet",
+    "version" : "0.1.0",
+    "name" : "ISiKValueSet"
+  },
+  {
+    "id" : "ISiKVersicherungsverhaeltnisGesetzlich",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisGesetzlich",
+    "version" : "0.1.0",
+    "name" : "ISiKVersicherungsverhaeltnisGesetzlich"
+  },
+  {
+    "id" : "ISiKVersicherungsverhaeltnisSelbstzahler",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisSelbstzahler",
+    "version" : "0.1.0",
+    "name" : "ISiKVersicherungsverhaeltnisSelbstzahler"
+  },
+  {
+    "id" : "ISiKVersicherungsverhaeltnisSonstige",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/ISiKVersicherungsverhaeltnisSonstige",
+    "version" : "0.1.0",
+    "name" : "ISiKVersicherungsverhaeltnisSonstige"
+  },
+  {
+    "id" : "MedicationQuantity",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/MedicationQuantity",
+    "version" : "0.1.0",
+    "name" : "MedicationQuantity"
+  },
+  {
+    "id" : "sd-mii-icu-herzzeitvolumen",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-herzzeitvolumen",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Herzzeitvolumen"
+  },
+  {
+    "id" : "sd-mii-icu-ideales-koerpergewicht",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-ideales-koerpergewicht",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Ideales_Koerpergewicht"
+  },
+  {
+    "id" : "sd-mii-icu-intrakranieller-druck-icp",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-intrakranieller-druck-icp",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Intrakranieller_Druck_Icp"
+  },
+  {
+    "id" : "sd-mii-icu-koerpergewicht-percentil-altersabhaengig",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpergewicht-percentil-altersabhaengig",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpergewicht_Percentil_Altersabhaengig"
+  },
+  {
+    "id" : "sd-mii-icu-koerpergroesse-percentil-altersabhaengig",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpergroesse-percentil-altersabhaengig",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpergroesse_Percentil_Altersabhaengig"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-achsel",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-achsel",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Achsel"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-atemwege",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-atemwege",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Atemwege"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-blut",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-blut",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Blut"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-brust",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-brust",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Brust"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-brustwirbelsaeule",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-brustwirbelsaeule",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Brustwirbelsaeule"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-gelenk",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-gelenk",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Gelenk"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-generisch",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-generisch",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Generisch"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-halswirbelsaeule",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-halswirbelsaeule",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Halswirbelsaeule"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-harnblase",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-harnblase",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Harnblase"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-kern",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-kern",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Kern"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-leiste",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-leiste",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Leiste"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-lendenwirbelsaeule",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-lendenwirbelsaeule",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Lendenwirbelsaeule"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-myokard",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-myokard",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Myokard"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-nasal",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-nasal",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Nasal"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-nasen-rachen-raum",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-nasen-rachen-raum",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Nasen_Rachen_Raum"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-rektal",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-rektal",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Rektal"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-speiseroehre",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-speiseroehre",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Speiseroehre"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-stirn",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-stirn",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Stirn"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-trommelfell",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-trommelfell",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Trommelfell"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-unter-der-zunge",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-unter-der-zunge",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Oral"
+  },
+  {
+    "id" : "sd-mii-icu-koerpertemperatur-vaginal",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-koerpertemperatur-vaginal",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Koerpertemperatur_Vaginal"
+  },
+  {
+    "id" : "sd-mii-icu-linksatrialer-druck",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksatrialer-druck",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Linksatrialer_Druck"
+  },
+  {
+    "id" : "sd-mii-icu-linksventri-herzindex-durch-indikatorverduennung",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventri-herzindex-durch-indikatorverduennung",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Linksventrikulaerer_Herzindex_Durch_Indikatorverduennung"
+  },
+  {
+    "id" : "sd-mii-icu-linksventri-herzzeitvolumen-durch-indikatorverd",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventri-herzzeitvolumen-durch-indikatorverd",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Linksventrikulaeres_Herzzeitvolumen_Durch_Indikatorverduennung"
+  },
+  {
+    "id" : "sd-mii-icu-linksventri-schlagvolumen-durch-indikatorverduennung",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventri-schlagvolumen-durch-indikatorverduennung",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Linksventrikulaeres_Schlagvolumen_Durch_Indikatorverduennung"
+  },
+  {
+    "id" : "sd-mii-icu-linksventri-schlagvolumenindex-durch-indikatorverd",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventri-schlagvolumenindex-durch-indikatorverd",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Linksventrikulaerer_Schlagvolumenindex_Durch_Indikatorverduennung"
+  },
+  {
+    "id" : "sd-mii-icu-linksventrikulaerer-druck",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventrikulaerer-druck",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Linksventrikulaerer_Druck"
+  },
+  {
+    "id" : "sd-mii-icu-linksventrikulaerer-herzindex",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventrikulaerer-herzindex",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Linksventrikulaerer_Herzindex"
+  },
+  {
+    "id" : "sd-mii-icu-linksventrikulaeres-schlagvolumen",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventrikulaeres-schlagvolumen",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Linksventrikulaeres_Schlagvolumen"
+  },
+  {
+    "id" : "sd-mii-icu-linksventrikulaeres-schlagvolumenindex",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-linksventrikulaeres-schlagvolumenindex",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Linksventrikulaeres_Schlagvolumenindex"
+  },
+  {
+    "id" : "sd-mii-icu-monitoring-und-vitaldaten",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-monitoring-und-vitaldaten",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Monitoring_Und_Vitaldaten"
+  },
+  {
+    "id" : "sd-mii-icu-o2saettigung-im-arteriellen-blut-durch-pulsoxymetrie",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-o2saettigung-im-arteriellen-blut-durch-pulsoxymetrie",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Sauerstoffsaettigung_Im_Arteriellen_Blut_Durch_Pulsoxymetrie"
+  },
+  {
+    "id" : "sd-mii-icu-o2saettigung-im-blut-postduktal-durch-pulsoxymetrie",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-o2saettigung-im-blut-postduktal-durch-pulsoxymetrie",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Sauerstoffsaettigung_Im_Blut_Postduktal_Durch_Pulsoxymetrie"
+  },
+  {
+    "id" : "sd-mii-icu-o2saettigung-im-blut-preduktal-durch-pulsoxymetrie",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-o2saettigung-im-blut-preduktal-durch-pulsoxymetrie",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Sauerstoffsaettigung_Im_Blut_Preduktal_Durch_Pulsoxymetrie"
+  },
+  {
+    "id" : "sd-mii-icu-pulmonalarterieller-blutdruck",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-pulmonalarterieller-blutdruck",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Pulmonalarterieller_Blutdruck"
+  },
+  {
+    "id" : "sd-mii-icu-pulmonalarterieller-wedge-druck",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-pulmonalarterieller-wedge-druck",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Pulmonalarterieller_Wedge_Druck"
+  },
+  {
+    "id" : "sd-mii-icu-pulmonalvaskulaerer-widerstandsindex",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-pulmonalvaskulaerer-widerstandsindex",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Pulmonalvaskulaerer_Widerstandsindex"
+  },
+  {
+    "id" : "sd-mii-icu-puls",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-puls",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Puls"
+  },
+  {
+    "id" : "sd-mii-icu-rechtsatrialer-druck",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-rechtsatrialer-druck",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Rechtsatrialer_Druck"
+  },
+  {
+    "id" : "sd-mii-icu-rechtsventrikulaerer-druck",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-rechtsventrikulaerer-druck",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Rechtsventrikulaerer_Druck"
+  },
+  {
+    "id" : "sd-mii-icu-sonstige-pulsatile-druecke-generisch",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-sonstige-pulsatile-druecke-generisch",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Sonstige_Pulsatile_Druecke_Generisch"
+  },
+  {
+    "id" : "sd-mii-icu-systemischer-vaskulaerer-widerstandsindex",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-systemischer-vaskulaerer-widerstandsindex",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Systemischer_Vaskulaerer_Widerstandsindex"
+  },
+  {
+    "id" : "sd-mii-icu-zentralvenoeser-blutdruck",
+    "type" : "StructureDefinition",
+    "url" : "http://gefyra.info/training/StructureDefinition/sd-mii-icu-zentralvenoeser-blutdruck",
+    "version" : "0.1.0",
+    "name" : "SD_MII_ICU_Zentralvenoeser_Blutdruck"
+  },
+  {
+    "id" : "ConditionDiagnosisSeverity",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ConditionDiagnosisSeverity",
+    "version" : "0.1.0",
+    "name" : "ConditionDiagnosisSeverity"
+  },
+  {
+    "id" : "DiagnosesSCT",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/DiagnosesSCT",
+    "version" : "0.1.0",
+    "name" : "DiagnosesSCT"
+  },
+  {
+    "id" : "EncounterReasonCodes",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/EncounterReasonCodes",
+    "version" : "0.1.0",
+    "name" : "EncounterReasonCodes"
+  },
+  {
+    "id" : "FhirMimeTypeVS",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/FhirMimeTypeVS",
+    "version" : "0.1.0",
+    "name" : "FhirMimeTypeVS"
+  },
+  {
+    "id" : "ISiKAccountType",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKAccountType",
+    "version" : "0.1.0",
+    "name" : "ISiKAccountType"
+  },
+  {
+    "id" : "ISiKBehandlungsergebnisReha",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKBehandlungsergebnisReha",
+    "version" : "0.1.0",
+    "name" : "ISiKBehandlungsergebnisRehaVS"
+  },
+  {
+    "id" : "ISiKBesondereBehandlungsformReha",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKBesondereBehandlungsformReha",
+    "version" : "0.1.0",
+    "name" : "ISiKBesondereBehandlungsformRehaVS"
+  },
+  {
+    "id" : "ISiKConfidentialityCodes",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKConfidentialityCodes",
+    "version" : "0.1.0",
+    "name" : "ISiKConfidentialityCodes"
+  },
+  {
+    "id" : "ISiKEntlassformReha",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKEntlassformReha",
+    "version" : "0.1.0",
+    "name" : "ISiKEntlassformRehaVS"
+  },
+  {
+    "id" : "ISiKKernTempSctVS",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKKernTempSctVS",
+    "version" : "0.1.0",
+    "name" : "ISiKKernTempSctVS"
+  },
+  {
+    "id" : "ISiKLocationPhysicalType",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKLocationPhysicalType",
+    "version" : "0.1.0",
+    "name" : "ISiKLocationPhysicalType"
+  },
+  {
+    "id" : "ISiKMDRRelevanzFormularVS",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKMDRRelevanzFormularVS",
+    "version" : "0.1.0",
+    "name" : "ISiKMDRRelevanzFormularVS"
+  },
+  {
+    "id" : "ISiKMedikationsartVS",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKMedikationsartVS",
+    "version" : "0.1.0",
+    "name" : "ISiKMedikationsartVS"
+  },
+  {
+    "id" : "ISiKSpecificGenericTempLoincVS",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKSpecificGenericTempLoincVS",
+    "version" : "0.1.0",
+    "name" : "ISiKSpecificGenericTempLoincVS"
+  },
+  {
+    "id" : "ISiKSpecificKernTempLoincVS",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKSpecificKernTempLoincVS",
+    "version" : "0.1.0",
+    "name" : "ISiKSpecificKernTempLoincVS"
+  },
+  {
+    "id" : "ISiKSubscriptionTopicVS",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKSubscriptionTopicVS",
+    "version" : "0.1.0",
+    "name" : "ISiKSubscriptionTopicVS"
+  },
+  {
+    "id" : "ISiKTerminCancelationReason",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKTerminCancelationReason",
+    "version" : "0.1.0",
+    "name" : "ISiKTerminCancelationReason"
+  },
+  {
+    "id" : "ISiKTerminPriority",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKTerminPriority",
+    "version" : "0.1.0",
+    "name" : "ISiKTerminPriority"
+  },
+  {
+    "id" : "ISiKUnterbrechungReha",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ISiKUnterbrechungReha",
+    "version" : "0.1.0",
+    "name" : "ISiKUnterbrechungRehaVS"
+  },
+  {
+    "id" : "MedikationsListeListModeVS",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/MedikationsListeListModeVS",
+    "version" : "0.1.0",
+    "name" : "MedikationsListeListModeVS"
+  },
+  {
+    "id" : "ObservationCodesCRP",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationCodesCRP",
+    "version" : "0.1.0",
+    "name" : "ObservationCodesCRP"
+  },
+  {
+    "id" : "ObservationCodesGFR",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationCodesGFR",
+    "version" : "0.1.0",
+    "name" : "ObservationCodesGFR"
+  },
+  {
+    "id" : "ObservationCodesHb",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationCodesHb",
+    "version" : "0.1.0",
+    "name" : "ObservationCodesHb"
+  },
+  {
+    "id" : "ObservationCodesPCT",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationCodesPCT",
+    "version" : "0.1.0",
+    "name" : "ObservationCodesPCT"
+  },
+  {
+    "id" : "ObservationCodesSerumkreatinin",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationCodesSerumkreatinin",
+    "version" : "0.1.0",
+    "name" : "ObservationCodesSerumkreatinin"
+  },
+  {
+    "id" : "ObservationCodesTSH",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationCodesTSH",
+    "version" : "0.1.0",
+    "name" : "ObservationCodesTSH"
+  },
+  {
+    "id" : "ObservationCodesThrombozyten",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationCodesThrombozyten",
+    "version" : "0.1.0",
+    "name" : "ObservationCodesThrombozyten"
+  },
+  {
+    "id" : "ObservationCodesTroponin",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationCodesTroponin",
+    "version" : "0.1.0",
+    "name" : "ObservationCodesTroponin"
+  },
+  {
+    "id" : "ObservationUnitsCRP",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsCRP",
+    "version" : "0.1.0",
+    "name" : "ObservationUnitsCRP"
+  },
+  {
+    "id" : "ObservationUnitsGFR",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsGFR",
+    "version" : "0.1.0",
+    "name" : "ObservationUnitsGFR"
+  },
+  {
+    "id" : "ObservationUnitsHb",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsHb",
+    "version" : "0.1.0",
+    "name" : "ObservationUnitsHb"
+  },
+  {
+    "id" : "ObservationUnitsPCT",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsPCT",
+    "version" : "0.1.0",
+    "name" : "ObservationUnitsPCT"
+  },
+  {
+    "id" : "ObservationUnitsSerumkreatinin",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsSerumkreatinin",
+    "version" : "0.1.0",
+    "name" : "ObservationUnitsSerumkreatinin"
+  },
+  {
+    "id" : "ObservationUnitsTSH",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsTSH",
+    "version" : "0.1.0",
+    "name" : "ObservationUnitsTSH"
+  },
+  {
+    "id" : "ObservationUnitsThrombozyten",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsThrombozyten",
+    "version" : "0.1.0",
+    "name" : "ObservationUnitsThrombozyten"
+  },
+  {
+    "id" : "ObservationUnitsTroponin",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ObservationUnitsTroponin",
+    "version" : "0.1.0",
+    "name" : "ObservationUnitsTroponin"
+  },
+  {
+    "id" : "ProzedurenCodesSCT",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ProzedurenCodesSCT",
+    "version" : "0.1.0",
+    "name" : "ProzedurenCodesSCT"
+  },
+  {
+    "id" : "ProzedurenKategorieSCT",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/ProzedurenKategorieSCT",
+    "version" : "0.1.0",
+    "name" : "ProzedurenKategorieSCT"
+  },
+  {
+    "id" : "SchwangerschaftEtMethodeVS",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/SchwangerschaftEtMethodeVS",
+    "version" : "0.1.0",
+    "name" : "SchwangerschaftEtMethodeVS"
+  },
+  {
+    "id" : "SchwangerschaftsstatusVS",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/SchwangerschaftsstatusVS",
+    "version" : "0.1.0",
+    "name" : "SchwangerschaftsstatusVS"
+  },
+  {
+    "id" : "SctRouteOfAdministration",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/SctRouteOfAdministration",
+    "version" : "0.1.0",
+    "name" : "SctRouteOfAdministration"
+  },
+  {
+    "id" : "StillstatusVS",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/StillstatusVS",
+    "version" : "0.1.0",
+    "name" : "StillstatusVS"
+  },
+  {
+    "id" : "current-smoking-status-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/current-smoking-status-uv-ips",
+    "version" : "0.1.0",
+    "name" : "CurrentSmokingStatusUvIps"
+  },
+  {
+    "id" : "vs-mii-icu-bodysite-observation-blutdruck",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-bodysite-observation-blutdruck",
+    "version" : "0.1.0",
+    "name" : "VS_MII_ICU_BodySite_Observation_Blutdruck"
+  },
+  {
+    "id" : "vs-mii-icu-bodysite-observation-monitoring-und-vitaldaten",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-bodysite-observation-monitoring-und-vitaldaten",
+    "version" : "0.1.0",
+    "name" : "VS_MII_ICU_BodySite_Observation_Monitoring_und_Vitaldaten"
+  },
+  {
+    "id" : "vs-mii-icu-code-monitoring-und-vitaldaten-iso11073",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-code-monitoring-und-vitaldaten-iso11073",
+    "version" : "0.1.0",
+    "name" : "VS_MII_ICU_Code_Monitoring_und_Vitaldaten_ISO11073"
+  },
+  {
+    "id" : "vs-mii-icu-code-monitoring-und-vitaldaten-loinc",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-code-monitoring-und-vitaldaten-loinc",
+    "version" : "0.1.0",
+    "name" : "VS_MII_ICU_Code_Monitoring_und_Vitaldaten_LOINC"
+  },
+  {
+    "id" : "vs-mii-icu-code-monitoring-und-vitaldaten-snomed",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-code-monitoring-und-vitaldaten-snomed",
+    "version" : "0.1.0",
+    "name" : "VS_MII_ICU_Code_Monitoring_und_Vitaldaten_SNOMED"
+  },
+  {
+    "id" : "vs-mii-icu-method-observation-blutdruck",
+    "type" : "ValueSet",
+    "url" : "http://gefyra.info/training/ValueSet/vs-mii-icu-method-observation-blutdruck",
+    "version" : "0.1.0",
+    "name" : "VS_MII_ICU_Method_Observation_Blutdruck"
+  },
+  {
+    "id" : "AppointmentReplaces",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces",
+    "version" : "0.1.0",
+    "name" : "AppointmentReplaces"
+  },
+  {
+    "id" : "PlannedEndDate",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedEndDate",
+    "version" : "0.1.0",
+    "name" : "PlannedEndDate"
+  },
+  {
+    "id" : "PlannedStartDate",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Encounter.plannedStartDate",
+    "version" : "0.1.0",
+    "name" : "PlannedStartDate"
+  },
+  {
+    "id" : "ScheduleName",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Schedule.name",
+    "version" : "0.1.0",
+    "name" : "ScheduleName"
+  },
+  {
+    "id" : "subscription-notification-type",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/ValueSet/subscription-notification-type",
+    "version" : "0.1.0",
+    "name" : "SubscriptionNotificationTypeVS",
+    "oids" : ["2.16.840.1.113883.4.642.3.1523"]
+  },
+  {
+    "id" : "subscription-notification-type",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/subscription-notification-type",
+    "version" : "0.1.0",
+    "name" : "SubscriptionNotificationTypeCS",
+    "oids" : ["2.16.840.1.113883.4.642.1.1524"]
+  },
+  {
+    "id" : "ISiKCapabilityStatementAMTSAkteur",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementAMTSAkteur",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementAMTSAkteur"
+  },
+  {
+    "id" : "ISiKCapabilityStatementAMTSRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementAMTSRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementAMTSRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementAufbaustrukturRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementAufbaustrukturRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementAufbaustrukturRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementBasisServerAkteur",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementBasisServerAkteur",
+    "version" : "0.1.0",
+    "name" : "ISiK-CapabilityStatementBasisServerAkteur"
+  },
+  {
+    "id" : "ISiKCapabilityStatementCompositionKonsumentenRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementCompositionKonsumentenRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementCompositionKonsumentenRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementDokumentenServerAkteur",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementDokumentenServerAkteur",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementDokumentenServerAkteur"
+  },
+  {
+    "id" : "ISiKCapabilityStatementDokumentenverwaltungRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementDokumentenverwaltungRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementDokumentenverwaltungRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementErweiterteStammdatenRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementErweiterteStammdatenRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementErweiterteStammdatenRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementGesundheitsstatusRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementGesundheitsstatusRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementGesundheitsstatusRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementKlinischeRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementKlinischeRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementKlinischeRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementLeistungserbringerRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementLeistungserbringerRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementLeistungserbringerRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementMedikamentRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikamentRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementMedikamentRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementMedikationInformationAkteur",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationInformationAkteur",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementMedikationInformationAkteur"
+  },
+  {
+    "id" : "ISiKCapabilityStatementMedikationInformationRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationInformationRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementMedikationInformationRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementMedikationVerabreichungAkteur",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationVerabreichungAkteur",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementMedikationVerabreichungMedikationsinformationAkteur"
+  },
+  {
+    "id" : "ISiKCapabilityStatementMedikationVerabreichungRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationVerabreichungRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementMedikationVerabreichungRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementMedikationVerordnungAkteur",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationVerordnungAkteur",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementMedikationVerordnungAkteur"
+  },
+  {
+    "id" : "ISiKCapabilityStatementMedikationVerordnungRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationVerordnungRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementMedikationVerordnungRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementMetadatenErzeugenRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMetadatenErzeugenRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementMetadatenErzeugenRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementMetadatenUpdateRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMetadatenUpdateRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementMetadatenUpdateRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementStammdatenRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementStammdatenRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementStammdatenRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementSubscriptionRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementSubscriptionRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementSubscriptionRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementSubscriptionServerAkteur",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementSubscriptionServerAkteur",
+    "version" : "0.1.0",
+    "name" : "ISiK-CapabilityStatementSubscriptionServerAkteur"
+  },
+  {
+    "id" : "ISiKCapabilityStatementTerminologieRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementTerminologieRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityISiKCapabilityStatementTerminologieRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementVersicherungsverhaeltnisRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementVersicherungsverhaeltnisRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementVersicherungsverhaeltnisRolle"
+  },
+  {
+    "id" : "ISiKCapabilityStatementVitalSignStandardSourceAkteur",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementVitalSignStandardSourceAkteur",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementVitalSignStandardSourceAkteur"
+  },
+  {
+    "id" : "ISiKCapabilityStatementVitalSignStandardSourceRolle",
+    "type" : "CapabilityStatement",
+    "url" : "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementVitalSignStandardSourceRolle",
+    "version" : "0.1.0",
+    "name" : "ISiKCapabilityStatementVitalSignStandardSource Rolle"
+  },
+  {
+    "id" : "ISiKAppointmentBookOperation",
+    "type" : "OperationDefinition",
+    "url" : "https://gematik.de/fhir/isik/OperationDefinition/AppointmentBook",
+    "version" : "0.1.0",
+    "name" : "Book"
+  },
+  {
+    "id" : "UpdateMetadata",
+    "type" : "OperationDefinition",
+    "url" : "https://gematik.de/fhir/isik/OperationDefinition/UpdateMetadata",
+    "version" : "0.1.0",
+    "name" : "UpdateMetadata"
+  },
+  {
+    "id" : "ExampleConditionalItem",
+    "type" : "Questionnaire",
+    "url" : "https://gematik.de/fhir/isik/Questionnaire/ExampleConditionalItem",
+    "version" : "0.1.0",
+    "name" : "ExampleConditionalItem"
+  },
+  {
+    "id" : "ExampleEntryValidationDecimal",
+    "type" : "Questionnaire",
+    "url" : "https://gematik.de/fhir/isik/Questionnaire/ExampleEntryValidationDecimal",
+    "version" : "0.1.0",
+    "name" : "ExampleEntryValidationDecimal"
+  },
+  {
+    "id" : "ExampleEntryValidationText",
+    "type" : "Questionnaire",
+    "url" : "https://gematik.de/fhir/isik/Questionnaire/ExampleEntryValidationText",
+    "version" : "0.1.0",
+    "name" : "ExampleEntryValidationText"
+  },
+  {
+    "id" : "ExampleExtractWithUnit",
+    "type" : "Questionnaire",
+    "url" : "https://gematik.de/fhir/isik/Questionnaire/ExampleExtractWithUnit",
+    "version" : "0.1.0",
+    "name" : "ExampleExtractWithUnit"
+  },
+  {
+    "id" : "ExampleInputPatternValidation",
+    "type" : "Questionnaire",
+    "url" : "https://gematik.de/fhir/isik/Questionnaire/ExampleInputPatternValidation",
+    "version" : "0.1.0",
+    "name" : "ExampleInputPatternValidation"
+  },
+  {
+    "id" : "ExampleMdrRelevant",
+    "type" : "Questionnaire",
+    "url" : "https://gematik.de/fhir/isik/Questionnaire/ExampleMdrRelevant",
+    "version" : "0.1.0",
+    "name" : "ExampleMdrRelevant"
+  },
+  {
+    "id" : "ExamplePrePopDemo",
+    "type" : "Questionnaire",
+    "url" : "https://gematik.de/fhir/isik/Questionnaire/ExamplePrePopDemo",
+    "version" : "0.1.0",
+    "name" : "ExamplePrePopDemo"
+  },
+  {
+    "id" : "ExamplePrePopObservation",
+    "type" : "Questionnaire",
+    "url" : "https://gematik.de/fhir/isik/Questionnaire/ExamplePrePopObservation",
+    "version" : "0.1.0",
+    "name" : "ExamplePrePopObservation"
+  }
+]

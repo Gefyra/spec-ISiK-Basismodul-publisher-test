@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="ExampleISiKMedikationTransaction"/>
+  <meta>
+    <profile value="http://gefyra.info/training/StructureDefinition/ISiKMedikationTransaction"/>
+  </meta>
+  <type value="transaction"/>
+  <entry>
+    <fullUrl value="http://my.source.server.local/fhir/MedicationStatement/ExampleISiKMedikationsInformation1"/>
+    <resource>
+      <MedicationStatement>
+        <id value="ExampleISiKMedikationsInformation1"/>
+        <meta>
+          <profile value="http://gefyra.info/training/StructureDefinition/ISiKMedikationsInformation"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationStatement_ExampleISiKMedikationsInformation1"> </a><p class="res-header-id"><b>Generated Narrative: MedicationStatement ExampleISiKMedikationsInformation1</b></p><a name="ExampleISiKMedikationsInformation1"> </a><a name="hcExampleISiKMedikationsInformation1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ISiKMedikationsInformation.html">ISiKMedikationsInformation</a></p></div><p><b>ISiK Accepted Risk</b>: Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar.</p><p><b>ISiK Medikationsart</b>: <a href="CodeSystem-ISiKMedikationsartCS.html#ISiKMedikationsartCS-akut">ISiK Medikationsart: akut</a> (Akutmedikation)</p><p><b>ISiK Selbstmedikation</b>: true</p><p><b>ISiK Behandlungsziel</b>: Schmerztherapie postoperativ</p><p><b>status</b>: Active</p><p><b>medication</b>: <a href="Medication-ExampleISiKMedikament1.html">Medication Acetylcystein</a></p><p><b>subject</b>: <a href="Patient-PatientinMusterfrau.html">Erika Fürstin von Musterfrau (official) Female, DoB: 1964-08-12 ( Private Krankenversicherung (use: secondary, ))</a></p><p><b>context</b>: <a href="Encounter-FachabteilungskontaktMinimal.html">Encounter: identifier = Visit number; status = unknown; class = inpatient encounter (ActCode#IMP); type = Operation,Abteilungskontakt; serviceType = Innere Medizin; period = 2022-05-03 --&gt; 2022-05-05</a></p><p><b>effective</b>: 2021-07-01 --&gt; (ongoing)</p><p><b>dateAsserted</b>: 2021-07-01</p><p><b>reasonReference</b>: <a href="Condition-BehandlungsDiagnoseFreitext.html">Condition </a></p><blockquote><p><b>dosage</b></p><p><b>timing</b>: Morning, Noon, Evening, Once</p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td>1 Brausetablette<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></td></tr></table></blockquote></div>
+        </text>
+        <extension url="http://gefyra.info/training/StructureDefinition/ExtensionISiKAcceptedRisk">
+          <valueString value="Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."/>
+        </extension>
+        <extension url="http://gefyra.info/training/StructureDefinition/ExtensionISiKMedikationsart">
+          <valueCoding>
+            <system value="http://gefyra.info/training/CodeSystem/ISiKMedikationsartCS"/>
+            <code value="akut"/>
+          </valueCoding>
+        </extension>
+        <extension url="http://gefyra.info/training/StructureDefinition/ExtensionISiKSelbstmedikation">
+          <valueBoolean value="true"/>
+        </extension>
+        <extension url="http://gefyra.info/training/StructureDefinition/ExtensionISiKBehandlungsziel">
+          <valueString value="Schmerztherapie postoperativ"/>
+        </extension>
+        <status value="active"/>
+        <medicationReference>
+          <reference value="Medication/ExampleISiKMedikament1"/>
+        </medicationReference>
+        <subject>
+          <reference value="Patient/PatientinMusterfrau"/>
+        </subject>
+        <context>
+          <reference value="Encounter/FachabteilungskontaktMinimal"/>
+        </context>
+        <effectivePeriod>
+          <start value="2021-07-01"/>
+        </effectivePeriod>
+        <dateAsserted value="2021-07-01"/>
+        <reasonReference>
+          <reference value="Condition/BehandlungsDiagnoseFreitext"/>
+        </reasonReference>
+        <dosage>
+          <timing>
+            <repeat>
+              <when value="MORN"/>
+              <when value="NOON"/>
+              <when value="EVE"/>
+            </repeat>
+          </timing>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+              <unit value="Brausetablette"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="1"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="http://my.target.fhir.server.local/MedicationStatement"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://my.source.server.local/fhir/Medication/ExampleISiKMedikament1"/>
+    <resource>
+      <Medication>
+        <id value="ExampleISiKMedikament1"/>
+        <meta>
+          <profile value="http://gefyra.info/training/StructureDefinition/ISiKMedikament"/>
+        </meta>
+        <text>
+          <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Medication_ExampleISiKMedikament1"> </a>Medikament codiert (Wirkstoff)</div>
+        </text>
+        <code>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/bfarm/atc"/>
+            <version value="2024"/>
+            <code value="V03AB23"/>
+            <display value="Acetylcystein"/>
+          </coding>
+        </code>
+        <status value="active"/>
+      </Medication>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="http://my.target.fhir.server.local/Medication"/>
+    </request>
+  </entry>
+</Bundle>
