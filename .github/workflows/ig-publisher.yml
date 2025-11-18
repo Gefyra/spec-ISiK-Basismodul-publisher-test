@@ -95,6 +95,10 @@ jobs:
           mkdir -p "${branch_dir}"
           cp -R "${{ env.SUSHI_INPUT_DIR }}/output/." "${branch_dir}/"
 
+          # Remove big IG ZIP that exceeds GitHub's 100 MB limit (keep it only in the artifact)
+          find "${branch_dir}" -name 'full-ig.zip' -print -delete || true
+          find "${branch_dir}" -name 'package.db' -print -delete || true
+
           cd gh-pages
           git config user.name "${GIT_AUTHOR_NAME}"
           git config user.email "${GIT_AUTHOR_EMAIL}"
